@@ -95,7 +95,6 @@ figure { margin: 0; }
 	background: url(../img/shutterstock_77178244.jpg) no-repeat scroll;
 	background-position:center;  
 	background-size: cover; 
-	backkground-color:#000;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -208,17 +207,10 @@ figure { margin: 0; }
 		width:100%;
 		height:auto;
 		position:relative;
-		bottom:0;
 		#emailForm {	
 			width:100%;
 			margin:auto;
-			#descriptionText {
-				display:block;
-				float:none;
-				color:red;
-			}
 			h1 {
-			   margin-top:0;
 			   font: small-caps  1.5em "Helvetica Neue Light", Arial, sans-serif;
 			   }
 			.get-it {
