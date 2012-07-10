@@ -151,29 +151,9 @@ figure { margin: 0; }
 		}
 	}
 }
-#iPad {
-	background: url(../img/ipad.png) no-repeat;
-	background-size:cover;
-	width:450px;
-	height:350px;
-	position:relative;
-	Top:12%;
-	Left:35%;
-}
 /* ==========================================================================
    Media Queries
    ========================================================================== */
-
-@media only screen and (max-width: 1024px) and (orientation:landscape) { 
-    #image_flash { 
-		background: url(../img/girl1.jpg) 50% 0 no-repeat scroll !important; 
-		background-position:center;  
-		background-size: cover; 
-		-webkit-background-size: cover;
-		-moz-background-size: cover;
-		-o-background-size: cover;
-	} 
-}
 @media (min-width: 0px) and (max-width: 767px) { 
 	#image_flash { 	
 		background: url(../img/shutterstock_77178244.jpg) no-repeat scroll;
@@ -227,17 +207,7 @@ figure { margin: 0; }
 			
 			
 		}
-	}
-	#iPad {
-	      background: url(../img/ipad.png) no-repeat;
-	      background-size:cover;
-	      width:8em;
-	      height:6.2em;
-	      position:relative;
-	      top:5%;
-	      left:33%;
-	}
-	      
+	}     
 }	      
 /* =============================================================================
    Links
