@@ -46,72 +46,61 @@ figure { margin: 0; }
 /* ==== primary styles =====================================================
    Author: Cameron Drake
    ========================================================================== */
-.twitter-follow-button {
-	margin-top:1em;
-	margin-right:2em;
-	float:right;
+.splash-page {
+	header {
+		height:3.5em;
+		width:100%;
+		position:relative;
+		background: #cd212b; /* Old browsers */
+		background: -moz-linear-gradient(top, #CD212B 0%, #A0010A 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #cd212b), color-stop(100%, #a0010a)); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top, #cd212b 0%, #a0010a 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top, #cd212b 0%, #a0010a 100%); /* Opera11.10+ */
+		background: -ms-linear-gradient(top, #cd212b 0%, #a0010a 100%); /* IE10+ */
+	 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cd212b', endColorstr='#a0010a', GradientType=0 ); /* IE6-9 */
+		background: linear-gradient(top, #cd212b 0%, #a0010a 100%); /* W3C */
+	}
+	#masthead {
+		background:url(../img/logo.png);
+		background-repeat:no-repeat;
+		width:200px;
+		height:62px;
+		margin-left:2em;
+		float:left;
+	}
+	.twitter-follow-button {
+		margin-top:1em;
+		margin-right:2em;
+		float:right;
+	}
 }
 .splashContent {
     height: 100%;
     width: 100%;
-	background: url(../img/photo23.jpg) no-repeat scroll;
-	background-position:center;
-	background-size:cover;
+    position: relative;
+    margin: 0 auto;
+}
+#abstract {
+	width:100%;
+	p {
+		width:80%;
+		margin:auto;
+		text-align:center;
+		font:100 1.5em "American Typewriter", Georgia, serif;
+		margin-top:2em;
+	}
+}
+
+#image_flash { 
+	background: url(../img/shutterstock_77178244.jpg) no-repeat scroll;
+	background-position:center;  
+	background-size: cover; 
+	backkground-color:#000;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
-    position: relative;
-    margin: 0 auto;
-	footer {
-		width:100%;
-		height:25em;
-		position:fixed;
-		bottom:0;
-		left:0;
-		/* webkit example */
-		background-image: -webkit-gradient(linear, right bottom, right top, from(rgba(0, 0, 0, 1.0)), to(rgba(0, 0, 0, 0)));
-		background-image: -moz-linear-gradient(bottom, rgba(0, 0, 0, 1.0) 20%, rgba(0, 0, 0, 0) 95%);
-		filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColor=0, endColorStr=#000);
-		-ms-filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColor=0, endColoStr=#000);
-		#links {
-			width:24em;
-			margin:auto;
-			margin-top:10em;
-			height:10em;
-			color:#fff;
-			font:600 2em "Myriad Pro Bold", "Gill Sans", "Impact", sans-serif;
-			div {
-				float:left;
-				width:8em;
-				text-align:center;
-			}
-		}
-		
-	}	
-}
-#headline_container {
-	width:70em;
-	margin:auto;
-	padding-top:10em;
-	#masthead {
-		background:url(../img/new-logo.png);
-		background-repeat:no-repeat;
-		background-size:cover;
-		-webkit-background-size: cover;
-		-moz-background-size: cover;
-		-o-background-size: cover;
-		width:300px;
-		height:300px;
-		float:left;
-	}
-	#abstract {
-		width:15em;
-		float:left;
-		margin-top:2em;
-		margin-left:1em;
-		text-align:left;
-		font:600 3em "Myriad Pro Bold", "Gill Sans", "Impact", sans-serif;
-	}
+	width:100%;
+	height:100%;
 }
 #sign-up {
 	width:100%;
@@ -162,9 +151,29 @@ figure { margin: 0; }
 		}
 	}
 }
+#iPad {
+	background: url(../img/ipad.png) no-repeat;
+	background-size:cover;
+	width:450px;
+	height:350px;
+	position:relative;
+	Top:12%;
+	Left:35%;
+}
 /* ==========================================================================
    Media Queries
    ========================================================================== */
+
+@media only screen and (max-width: 1024px) and (orientation:landscape) { 
+    #image_flash { 
+		background: url(../img/girl1.jpg) 50% 0 no-repeat scroll !important; 
+		background-position:center;  
+		background-size: cover; 
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+	} 
+}
 @media (min-width: 0px) and (max-width: 767px) { 
 	#image_flash { 	
 		background: url(../img/shutterstock_77178244.jpg) no-repeat scroll;
@@ -218,7 +227,17 @@ figure { margin: 0; }
 			
 			
 		}
-	}     
+	}
+	#iPad {
+	      background: url(../img/ipad.png) no-repeat;
+	      background-size:cover;
+	      width:8em;
+	      height:6.2em;
+	      position:relative;
+	      top:5%;
+	      left:33%;
+	}
+	      
 }	      
 /* =============================================================================
    Links
