@@ -46,15 +46,10 @@ figure { margin: 0; }
 /* ==== primary styles =====================================================
    Author: Cameron Drake
    ========================================================================== */
-.twitter-follow-button {
-	margin-top:1em;
-	margin-right:2em;
-	float:right;
-}
 .splashContent {
     height: 100%;
     width: 100%;
-	background: url(../img/photo23.jpg) no-repeat scroll;
+	background: url(../img/photo23.jpg) no-repeat ;
 	background-position:center;
 	background-size:cover;
 	-webkit-background-size: cover;
@@ -62,159 +57,124 @@ figure { margin: 0; }
 	-o-background-size: cover;
     position: relative;
     margin: 0 auto;
+	header {
+		width:100%;
+		height:20%;
+		/* Set the gradient at the bottom of the screen using rgba */
+		background-image: -webkit-gradient(linear, right top, right bottom, from(rgba(255, 255, 255, 1.0)), to(rgba(255, 255, 255, 0)));
+		background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 1.0) 20%, rgba(255, 255, 255, 0) 95%);
+		filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColor=#fff, endColorStr=0);
+		-ms-filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColor=#fff, endColoStr=0);
+		#headline_container {
+			width:85%;
+			margin:auto;
+			padding-top:5em;
+			#masthead {
+				background:url(../img/new-logo.png);
+				background-repeat:no-repeat;
+				background-size:cover;
+				-webkit-background-size: cover;
+				-moz-background-size: cover;
+				-o-background-size: cover;
+				width:250px;
+				height:250px;
+				float:left;
+			}
+			#abstract {
+				width:60%;
+				float:left;
+				margin-top:2em;
+				margin-left:1em;
+				text-align:left;
+				font:600 2.5em "Myriad Pro Bold", "Gill Sans", "Impact", sans-serif;
+			}
+			#flashword {
+				color:red;
+			}
+		}
+	}
+	#content {
+		height:60%;
+		width:85%;
+		margin:auto;
+		form {
+			width:85%;
+			height:8em;
+			position:absolute;
+			top:50%;
+			margin:auto;
+			text-align:center;
+			h1 {
+				font: 600 3em "Myriad Pro Bold", "Gill Sans", "Impact", sans-serif;
+				color:#fff;
+				margin-bottom:0.5em;
+				text-shadow: 1px 1px 3px #000;
+			}
+			input    {
+				width:200px;
+				border: 1px solid #999;
+				height: 2.2em;
+			  	-webkit-border-radius: 12px;
+			         	border-radius: 12px;
+				-webkit-background-clip: padding-box; 
+				   -moz-background-clip: padding; 
+						background-clip: padding-box;
+				-webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+				   -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+						box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+				margin-left:0.5em;
+				margin-bottom:0.5em;
+			}
+			#descriptionText {
+				color:#fff;
+				margin:0.5em;
+			}
+			.get-it {
+				width:5em;
+				background:#cd212b;
+				color:#fff;
+				height:2em;
+				opacity: 1;
+				filter: alpha(opacity=100);
+				margin-top:0.2em;
+			}
+			.get-it:hover {
+				background:#cc3333;
+				color:#fff;
+			}
+		}
+	}
 	footer {
 		width:100%;
-		height:25em;
-		position:fixed;
-		bottom:0;
-		left:0;
-		/* webkit example */
+		height:16%;
+		/* Set the gradient at the bottom of the screen using rgba */
 		background-image: -webkit-gradient(linear, right bottom, right top, from(rgba(0, 0, 0, 1.0)), to(rgba(0, 0, 0, 0)));
 		background-image: -moz-linear-gradient(bottom, rgba(0, 0, 0, 1.0) 20%, rgba(0, 0, 0, 0) 95%);
 		filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColor=0, endColorStr=#000);
 		-ms-filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColor=0, endColoStr=#000);
 		#links {
-			width:24em;
+			width:84%;
 			margin:auto;
-			margin-top:10em;
-			height:10em;
 			color:#fff;
 			font:600 2em "Myriad Pro Bold", "Gill Sans", "Impact", sans-serif;
-			div {
+			text-align:center;
+			p {
 				float:left;
-				width:8em;
-				text-align:center;
+				width:33%;
 			}
 		}
-		
 	}	
 }
-#headline_container {
-	width:70em;
-	margin:auto;
-	padding-top:10em;
-	#masthead {
-		background:url(../img/new-logo.png);
-		background-repeat:no-repeat;
-		background-size:cover;
-		-webkit-background-size: cover;
-		-moz-background-size: cover;
-		-o-background-size: cover;
-		width:300px;
-		height:300px;
-		float:left;
-	}
-	#abstract {
-		width:15em;
-		float:left;
-		margin-top:2em;
-		margin-left:1em;
-		text-align:left;
-		font:600 3em "Myriad Pro Bold", "Gill Sans", "Impact", sans-serif;
-	}
-	#flashword {
-		color:red;
-	}
-}
-#emailForm {
-	width:650px;
-	margin:auto;
-	margin-top:20em;
-	h1 {
-		font: 600 3em "Myriad Pro Bold", "Gill Sans", "Impact", sans-serif;
-		color:#fff;
-		margin-bottom:0.5em;
-		text-shadow: 1px 1px 3px #000;
-	}
-	input    {
-		width:200px;
-		border: 1px solid #999;
-		height: 2.2em;
-		-webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
-		-moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
-		box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
-		float:left;
-		margin-left:0.5em;
-		margin-bottom:0.5em;
-	}
-	#descriptionText {
-		color:#fff;
-		margin:0.5em;
-		float:left;
-	}
-	.get-it {
-		width:20%;
-		background:#cd212b;
-		color:#fff;
-		height:2em;
-		opacity: 1;
-		filter: alpha(opacity=100);
-		float:left;
-		margin-top:0.2em;
-	}
-	.get-it:hover {
-		background:#cc3333;
-		color:#fff;
-	}
-}
+
 /* ==========================================================================
    Media Queries
    ========================================================================== */
-@media (min-width: 0px) and (max-width: 767px) { 
-	#image_flash { 	
-		background: url(../img/shutterstock_77178244.jpg) no-repeat scroll;
-		background-position:center;  
-		background-size: cover; 
-		-webkit-background-size: cover;
-		-moz-background-size: cover;
-		-o-background-size: cover;
-	} 
-	.splash-page {
-		header {
-			height:55px;
-		}
-		#masthead {
-			width:66px;
-			height:62px;
-			background-position:-134px -10px;
-			margin-top:0;
-			margin-left:1em;	
-		}
-		.twitter-follow-button {
-			margin-top:0.8em;
-			margin-right:1em;
-		}
-	}
-	#abstract{
-		p {
-			font:100 1em "American Typewriter", Georgia, serif;
-		}
-	}
-	#sign-up {
-		width:100%;
-		height:auto;
-		position:relative;
-		bottom:0;
-		#emailForm {	
-			width:100%;
-			margin:auto;
-			#descriptionText {
-				display:block;
-				float:none;
-				color:red;
-			}
-			h1 {
-			   margin-top:0;
-			   font: small-caps  1.5em "Helvetica Neue Light", Arial, sans-serif;
-			   }
-			.get-it {
-				float:none;
-			}
-			
-			
-		}
-	}     
+@media (min-width: 960px) and (max-width: 1024) { 
+	
 }	      
+@media (min-width:0) and (max-width: 640px) {
+	
+}
 /* =============================================================================
    Links
    ========================================================================== */
