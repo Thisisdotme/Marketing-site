@@ -14,21 +14,21 @@ html, button, input, select, textarea { font-family: sans-serif; color: #222; }
 
 body { margin: 0; font-size: 1em; line-height: 1.4; height:100%;}
 /* Condensed Universal Reset */
-
 * {
-	vertical-align: baseline;
-	font-weight: inherit;
-	font-family: inherit;
-	font-style: inherit;
-	font-size: 100%;
-	border: 0 none;
-	outline: 0;
-	padding: 0;
-	margin: 0;
-	}
+    vertical-align: baseline;
+    font-weight: inherit;
+    font-family: inherit;
+    font-style: inherit;
+    font-size: 100%;
+    border: 0 none;
+    outline: 0;
+    padding: 0;
+    margin: 0;
+    }
 .clear_float {
-	clear:both;
-}	
+    clear:both;
+}
+.hidden { display: none !important; }
 /*
  * Remove text-shadow in selection highlight: h5bp.com/i
  * These selection declarations have to be separate
@@ -47,35 +47,37 @@ figure { margin: 0; }
    Author: Cameron Drake
    ========================================================================== */
 .splashContent {
-    height: 100%;
-    width: 100%;
-	background: url(../img/photo23.jpg) no-repeat ;
+	height:100%;
+	z-index:0;
+	width:100%;
+	background:url(../img/photo23.jpg) no-repeat;
 	background-position:center;
+	background-attachment:fixed;
 	background-size:cover;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-    position: relative;
-    margin: 0 auto;
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+	-o-background-size:cover;
+	position:relative;
+	margin:0 auto;
 	header {
 		width:100%;
 		height:20%;
 		/* Set the gradient at the bottom of the screen using rgba */
-		background-image: -webkit-gradient(linear, right top, right bottom, from(rgba(255, 255, 255, 1.0)), to(rgba(255, 255, 255, 0)));
-		background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 1.0) 20%, rgba(255, 255, 255, 0) 95%);
-		filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColor=#fff, endColorStr=0);
-		-ms-filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColor=#fff, endColoStr=0);
+		background-image:-webkit-gradient(linear,right top,right bottom,from(rgba(255,255,255,1.0)),to(rgba(255,255,255,0)));
+		background-image:-moz-linear-gradient(top,rgba(255,255,255,1.0) 20%,rgba(255,255,255,0) 95%);
+		filter:progid:DXImageTransform.Microsoft.gradient(gradientType=0,startColor=#fff,endColorStr=0);
+		-ms-filter:progid:DXImageTransform.Microsoft.gradient(gradientType=0,startColor=#fff,endColoStr=0);
 		#headline_container {
 			width:85%;
 			margin:auto;
 			padding-top:5em;
 			#masthead {
-				background:url(../img/new-logo.png);
+				background:url(../img/logo.png) no-repeat;
 				background-repeat:no-repeat;
 				background-size:cover;
-				-webkit-background-size: cover;
-				-moz-background-size: cover;
-				-o-background-size: cover;
+				-webkit-background-size:cover;
+				-moz-background-size:cover;
+				-o-background-size:cover;
 				width:250px;
 				height:250px;
 				float:left;
@@ -83,60 +85,79 @@ figure { margin: 0; }
 			#abstract {
 				width:60%;
 				float:left;
-				margin-top:2em;
 				margin-left:1em;
 				text-align:left;
-				font:600 2.5em "Myriad Pro Bold", "Gill Sans", "Impact", sans-serif;
+				margin-top:2em;
+				list-style:none;
+				font:600 2em "Myriad Pro Bold","Gill Sans","Impact",sans-serif;
+				.oneliner {
+					display:inline;
+					margin-top:1em;
+				}
 			}
-			#flashword {
-				color:red;
-				font-style:italic;
+			#ticker {
+				display:inline;
+				margin-top:1em;
+				li {
+					display:inline;
+					color:red;
+					list-style:none;
+					margin-left:0em;
+				}
 			}
 		}
 	}
 	#content {
-		height:60%;
+		height:auto;
 		width:85%;
 		margin:auto;
-		form {
-			width:85%;
-			height:8em;
-			position:absolute;
-			top:50%;
+		text-align:center;
+		h1 {
+			font:600 3em "Myriad Pro Bold","Gill Sans","Impact",sans-serif;
+			color:#fff;
+			margin-top:20%;
+			margin-bottom:0.5em;
+			text-shadow:1px 1px 3px #000;
+		}
+		#signup {
+			width:41em;
 			margin:auto;
-			text-align:center;
-			h1 {
-				font: 600 3em "Myriad Pro Bold", "Gill Sans", "Impact", sans-serif;
+		}
+		form {
+ 			text-align:center;
+			width:36em;
+			margin:auto;
+			p {
+				font:300 1em "Helvetica Neue" helvetica,sans-serif;
 				color:#fff;
-				margin-bottom:0.5em;
-				text-shadow: 1px 1px 3px #000;
+				text-shadow:1px 1px 3px #000;
+				line-height:2em;
+				float:left;
 			}
-			input    {
-				width:200px;
-				border: 1px solid #999;
-				height: 2.2em;
-			  	-webkit-border-radius: 12px;
-			         	border-radius: 12px;
-				-webkit-background-clip: padding-box; 
-				   -moz-background-clip: padding; 
-						background-clip: padding-box;
-				-webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
-				   -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
-						box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+			input {
+				float:left;
+				width:12em;
+				border:1px solid #999;
+				height:2.2em;
+				-webkit-border-radius:12px;
+				border-radius:12px;
+				-webkit-background-clip:padding-box;
+				-moz-background-clip:padding;
+				background-clip:padding-box;
+				-webkit-box-shadow:0px 0px 8px rgba(0,0,0,0.3);
+				-moz-box-shadow:0px 0px 8px rgba(0,0,0,0.3);
+				box-shadow:0px 0px 8px rgba(0,0,0,0.3);
 				margin-left:0.5em;
 				margin-bottom:0.5em;
 			}
-			#descriptionText {
-				color:#fff;
-				margin:0.5em;
-			}
 			.get-it {
+				float:left;
 				width:5em;
 				background:#cd212b;
 				color:#fff;
 				height:2em;
-				opacity: 1;
-				filter: alpha(opacity=100);
+				opacity:1;
+				filter:alpha(opacity=100);
 				margin-top:0.2em;
 			}
 			.get-it:hover {
@@ -145,37 +166,157 @@ figure { margin: 0; }
 			}
 		}
 	}
+	#links {
+		width:84%;
+		z-index:1;
+		color:#fff;
+		margin:auto;
+		margin-top:25%;
+		padding-bottom:2em;
+		font:600 2em "Myriad Pro Bold","Gill Sans","Impact",sans-serif;
+		text-align:center;
+		p {
+			float:left;
+			width: 33%;
+		}
+	}
 	footer {
 		width:100%;
-		height:16%;
+		height:20%;
+		z-index:-1;
+		position:fixed;
+		bottom:0;
+		left:0;
 		/* Set the gradient at the bottom of the screen using rgba */
-		background-image: -webkit-gradient(linear, right bottom, right top, from(rgba(0, 0, 0, 1.0)), to(rgba(0, 0, 0, 0)));
-		background-image: -moz-linear-gradient(bottom, rgba(0, 0, 0, 1.0) 20%, rgba(0, 0, 0, 0) 95%);
-		filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColor=0, endColorStr=#000);
-		-ms-filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColor=0, endColoStr=#000);
-		#links {
-			width:84%;
-			margin:auto;
-			color:#fff;
-			font:600 2em "Myriad Pro Bold", "Gill Sans", "Impact", sans-serif;
-			text-align:center;
-			p {
-				float:left;
-				width:33%;
-			}
-		}
-	}	
+		background-image:-webkit-gradient(linear,right bottom,right top,from(rgba(0,0,0,1.0)),to(rgba(0,0,0,0)));
+		background-image:-moz-linear-gradient(bottom,rgba(0,0,0,1.0) 20%,rgba(0,0,0,0) 95%);
+		filter:progid:DXImageTransform.Microsoft.gradient(gradientType=0,startColor=0,endColorStr=#000);
+		-ms-filter:progid:DXImageTransform.Microsoft.gradient(gradientType=0,startColor=0,endColoStr=#000);
+	}
 }
-
 /* ==========================================================================
    Media Queries
    ========================================================================== */
-@media (min-width: 960px) and (max-width: 1024) { 
-	
-}	      
-@media (min-width:0) and (max-width: 640px) {
-	
+@media (width:1024px) {
+	.splashContent {
+		header {
+			#headline_container {
+				padding-top:1em;
+				#masthead {
+					height:200px;
+					width:200px;
+				}
+				#abstract {
+					margin-top:1em;
+				}
+				#ticker {
+					margin-top:0em;
+				}
+			}
+		}
+		#content {
+			h1 {
+				margin-top:3em;
+			}
+			form {
+			}
+		}
+		#links {
+			margin-top:4em;
+		}
+	}
 }
+@media (min-width:768px) and (max-width:1023px){
+	.splashContent {
+		header {
+			#headline_container {
+				width:95%;
+				padding-top:1em;
+				#masthead {
+					height:200px;
+					width:200px;
+				}
+				#abstract {
+					width:66%;
+					margin-top:1.5em;
+				}
+				#ticker {
+					margin-top:0em;
+				}
+			}
+		}
+		#content {
+			h1 {
+				margin-top:5em;
+			}
+			form {
+			}
+		}
+	}
+}
+@media (min-width:0) and (max-width:640px) {
+	.splashContent {
+		header {
+			#headline_container {
+				width:100%;
+				padding-top:1em;
+				text-align:center;
+				#masthead {
+					height:100px;
+					width:100px;
+					float:none;
+					margin:auto;
+					margin-bottom:1em;
+				}
+				#abstract {
+					font:600 1em "Myriad Pro Bold","Gill Sans","Impact",sans-serif;
+					margin-top:0;
+					float:none;
+					width:100%;
+					margin-left:0;
+					text-align:center;
+				}
+				#ticker {
+					color:red;
+					list-style:none;
+					margin-left:-2.2em;
+				}
+			}
+		}
+		#content {
+			width:95%;
+			margin:auto;
+			h1 {
+				font:600 1.5em "Myriad Pro Bold","Gill Sans","Impact",sans-serif;
+				margin-top:6em;
+			}
+			#signup {
+				width:65%;
+				margin:auto;
+			}
+			form {
+				width:100%;
+				margin:auto;
+				text-align:center;
+				p {
+					display:block;
+				}
+				input {
+					width:17em;
+					display:block;
+				}
+				.get-it {
+					width:17em;
+					height:2em;
+				}
+				.get-it:hover {
+				}
+			}
+		}
+		#links {
+			font: 600 1em "Myriad Pro Bold","Gill Sans","Impact",sans-serif;
+		}
+	}
 /* =============================================================================
    Links
    ========================================================================== */
@@ -320,7 +461,7 @@ td { vertical-align: top; }
 .ir br { display: none; }
 
 /* Hide from both screenreaders and browsers: h5bp.com/u */
-.hidden { display: none !important; visibility: hidden; }
+.hidden { display: none !important; }
 
 /* Hide only visually, but have it available for screenreaders: h5bp.com/v */
 .visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
@@ -339,18 +480,30 @@ td { vertical-align: top; }
 /* ===========================================================
    Print styles.
    ========================================================================== */
-
 @media print {
-  * { background: transparent !important; color: black !important; box-shadow:none !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; } /* Black prints faster: h5bp.com/s */
-  a, a:visited { text-decoration: underline; }
-  a[href]:after { content: " (" attr(href) ")"; }
-  abbr[title]:after { content: " (" attr(title) ")"; }
-  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  /* Don't show links for images, or javascript/internal links */
-  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
-  thead { display: table-header-group; } /* h5bp.com/t */
-  tr, img { page-break-inside: avoid; }
-  img { max-width: 100% !important; }
-  @page { margin: 0.5cm; }
-  p, h2, h3 { orphans: 3; widows: 3; }
-  h2, h3 { page-break-after: avoid; }
+    * {
+background:transparent !important;
+color:black !important;
+box-shadow:none !important;
+text-shadow:none !important;
+filter:none !important;
+-ms-filter: none !important;
+}
+/* Black prints faster:h5bp.c\om/s */
+a,a:visited {
+    text-decoration:underline;
+    }
+a[href]:after {
+    content:" (" attr(href) ")";
+    }
+abbr[title]:after {
+    content:" (" attr(title) ")";
+    }
+.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after {
+    content: "";
+    }
+/* Don't show links for images,or javascript/internal links */
+pre,blockquote{border:1px solid #999;page-break-inside:avoid;}thead{display: table-header-group;}/* h5bp.com/t */
+tr,img{page-break-inside:avoid;}img{max-width:100% !important;}@page{margin:0.5cm;}p,h2,h3{orphans:3;widows:3;}h2,h3{page-break-after: avoid;}}
+
 }

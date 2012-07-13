@@ -20,47 +20,61 @@
 <link rel="icon" type="image/png" href="img/favicon.png">
 </head>
 <body class="splashContent">
-<!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http:\                                                    
+<!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http:\                                                   \
 //www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
 <header>
-	<div id="headline_container">
-		<div id="masthead">
-		</div>
-		<div id="abstract">
-			 Your online identity is about to get a lot more <span id="flashword">simple</span>
-		</div>
+<div id="headline_container">
+	<div id="masthead">
 	</div>
+	<div id="abstract">
+		<span class="oneliner">Your online identity is about to get a lot more</span>
+		<ul id="ticker" class="hidden">
+			<li>elegant.</li>
+			<li>personal.</li>
+			<li>relevant.</li>
+			<li>meaningful.</li>
+			<li>simple.</li>
+		</ul>
+	</div>
+</div>
 </header>
-<div class="clear_float"></div>
+<div class="clear_float">
+</div>
 <div id="content">
-		<form name="emails" action="" method="POST">
-			<h1>want to know more?</h1>
-			<input type="text" value="email address">
-			<input type="button" value="Get it!" class="get-it"/>
-		</form>
+	<h1>Reserve Your Username</h1>
+	<form name="emails" action="" method="POST">
+		<p>
+			thisis.me/
+		</p>
+		<input type="text" value="yourname">
+		<input type="text" value="email address">
+		<input type="button" value="Get it!" class="get-it"/>
+	</form>
+	<div class="clear_float">
+	</div>
+</div>
+
+<div id="links">
+	<p>
+		 Blog
+	</p>
+	<p>
+		 Jobs
+	</p>
+	<p>
+		 Contact
+	</p>
 </div>
 <footer>
-	<div id="links">
-		<p>
-			Blog
-		</p>
-		<p>
-			Jobs
-		</p>
-		<p>
-			Contact
-		</p>	
-	</div>
 </footer>
 <!-- SCRIPTS -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')</script>
+<script>
+$(document).ready(function() {
+    $("ul#ticker").removeClass("hidden");
+});
+</script>
 <script src="js/plugins.js"></script>
 <!-- google analytics -->
-<script>                                                                                                                                                                                                           
-    var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];                                                                                                                                                    
-    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];                                                                                                                                        
-    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';                                                                                                                             
-    s.parentNode.insertBefore(g,s)}(document,'script'));                                                                                                                                                           
-  </script>
 </body>
