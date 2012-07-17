@@ -19,46 +19,31 @@
 <link rel="stylesheet" href="css/style.css">
 <link rel="icon" type="image/png" href="img/favicon.png">
 </head>
-<body>
+<body class="siteContent">
 <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http:\                                                   \
 //www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
-<div class="siteContent">
-	<div id="headline_container">
-		<div id="masthead">
-		</div>
-		<div id="abstract">
-			 Your online identity is about to get a lot more
-			<ul id="ticker" class="hidden">
-				<li>elegant.</li>
-				<li>personal.</li>
-				<li>relevant.</li>
-				<li>meaningful.</li>
-				<li>simple.</li>
-			</ul>
-		</div>
-	</div>
+<div id="contactpage">
+	<a href="/"><div id="masthead">
+	</div></a>
 	<div class="clear_float">
 	</div>
-	<div id="splashpage">
-		<h1>reserve your username</h1>
-		<form name="emails" action="" method="POST">
-			<input type="text" onfocus="if(this.value == 'yourname') { this.value = ''; } " onblur="if(this.value == '') { this.value = 'yourname'; } " value="yourname" id="firstinput">
-			<input type="text" onfocus="if(this.value == 'email address') { this.value = ''; }" onblur="if(this.value == '') { this.value = 'email address'; } " value="email address">
-			<button type="button">reserve</button>
-		</form>
-	</div>
-	<div class="clear_float">
-	</div>
-	<div id="links">
-		<a href="http://ec2-50-18-20-224.us-west-1.compute.amazonaws.com/blog">
-		<p>
-			Blog
-		</p>
-		</a>
-		<a href="/jobs.html">Jobs</a>
-		<a href="/contact.html">Contact</a>
+	<div id="map">
+		<iframe width="315" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" id="googlemap" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=300+Brannan+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=300+Brannan+s&amp;sll=37.77493,-122.419416&amp;sspn=0.331884,0.307961&amp;ie=UTF8&amp;hq=&amp;hnear=300+Brannan+St,+San+Francisco,+California+94107&amp;t=m&amp;ll=37.781841,-122.392073&amp;spn=0.023743,0.036478&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe><br />
+		<div id="mapdescription">
+			<h1>contact</h1>
+			<p>300 Brannan Street
+			San Francisco, CA 94107</p>
+			<a href="">info@thisis.me</a>
+		</div>
 	</div>
 </div>
+<div class="links">
+	<a href="http://ec2-50-18-20-224.us-west-1.compute.amazonaws.com/blog">Blog</a>
+	<a href="/jobs.html">Jobs</a>
+	<a href="/contact.html">Contact</a>
+</div>
+<footer>
+</footer>
 <!-- SCRIPTS -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script src="js/jquery.validationEngine-en.js" type="text/javascript" charset="utf-8"></script>

@@ -1,55 +1,41 @@
 /* =============================================================================
    HTML5 display definitions
    ========================================================================== */
-/* line 4, ../sass/style.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
-  display: block;
-}
+  display: block; }
 
-/* line 5, ../sass/style.scss */
 audio, canvas, video {
   display: inline-block;
   *display: inline;
-  *zoom: 1;
-}
+  *zoom: 1; }
 
-/* line 6, ../sass/style.scss */
 audio:not([controls]) {
-  display: none;
-}
+  display: none; }
 
-/* line 7, ../sass/style.scss */
 [hidden] {
-  display: none;
-}
+  display: none; }
 
 /* =============================================================================
-   Base & Resets
-   ========================================================================== */
-/* line 11, ../sass/style.scss */
+  Base & Resets
+  ========================================================================== */
 html {
   font-size: 100%;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
-  height: 100%;
-}
+  height: 100%; }
 
-/* line 13, ../sass/style.scss */
 html, button, input, select, textarea {
   font-family: sans-serif;
-  color: #222;
-}
+  color: #222; }
 
-/* line 15, ../sass/style.scss */
 body {
   margin: 0;
   font-size: 1em;
   line-height: 1.4;
   height: 100%;
-}
+  background-color: #F2F2F2; }
 
 /* Condensed Universal Reset */
-/* line 17, ../sass/style.scss */
 * {
   vertical-align: baseline;
   font-weight: inherit;
@@ -59,793 +45,628 @@ body {
   border: 0 none;
   outline: 0;
   padding: 0;
-  margin: 0;
-}
+  margin: 0; }
 
-/* line 28, ../sass/style.scss */
 .clear_float {
-  clear: both;
-}
+  clear: both; }
 
-/* line 31, ../sass/style.scss */
 .hidden {
-  display: none !important;
-}
+  display: none !important; }
 
-/*
- * Remove text-shadow in selection highlight: h5bp.com/i
- * These selection declarations have to be separate
- * Also: hot pink! (or customize the background color to match your design)
- */
-/* line 38, ../sass/style.scss */
+/* * Remove text-shadow in selection highlight:h5bp.com/i * These selection declarations have to be separate * Also:hot pink! (or customize the background color to match your design) */
 ::-moz-selection {
   background: #fe57a1;
   color: #fff;
-  text-shadow: none;
-}
+  text-shadow: none; }
 
-/* line 39, ../sass/style.scss */
 ::selection {
   background: #fe57a1;
   color: #fff;
-  text-shadow: none;
-}
+  text-shadow: none; }
 
-/* line 41, ../sass/style.scss */
 img {
   border: 0;
   -ms-interpolation-mode: bicubic;
-  vertical-align: middle;
-}
+  vertical-align: middle; }
 
-/* line 42, ../sass/style.scss */
 svg:not(:root) {
-  overflow: hidden;
-}
+  overflow: hidden; }
 
-/* line 43, ../sass/style.scss */
 figure {
-  margin: 0;
-}
+  margin: 0; }
 
-/* line 44, ../sass/style.scss */
 .chromeframe {
   margin: 0.2em 0;
   background: #ccc;
   color: black;
-  padding: 0.2em 0;
-}
+  padding: 0.2em 0; }
 
 /* ==== primary styles =====================================================
    Author: Cameron Drake
    ========================================================================== */
-/* line 49, ../sass/style.scss */
-.splashContent {
-  height: 100%;
+.siteContent {
   z-index: 0;
-  width: 100%;
+  width: 960px;
+  height: 880px;
   background: url(../img/photo23.jpg) no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-  background-size: cover;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  position: relative;
-  margin: 0 auto;
-}
-/* line 62, ../sass/style.scss */
-.splashContent header {
-  width: 100%;
-  height: 20%;
-  /* Set the gradient at the bottom of the screen using rgba */
-  background-image: -webkit-gradient(linear, right top, right bottom, from(white), to(rgba(255, 255, 255, 0)));
-  background-image: -moz-linear-gradient(top, white 20%, rgba(255, 255, 255, 0) 95%);
-  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0,startColor=#fff,endColorStr=0);
-  -ms-filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0,startColor=#fff,endColoStr=0);
-}
-/* line 70, ../sass/style.scss */
-.splashContent header #headline_container {
-  width: 85%;
-  margin: auto;
-  padding-top: 5em;
-}
-/* line 74, ../sass/style.scss */
-.splashContent header #headline_container #masthead {
-  background: url(../img/logo.png) no-repeat;
-  background-repeat: no-repeat;
-  background-size: cover;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  width: 250px;
-  height: 250px;
-  float: left;
-}
-/* line 85, ../sass/style.scss */
-.splashContent header #headline_container #abstract {
-  width: 60%;
-  float: left;
-  margin-left: 1em;
-  text-align: left;
-  margin-top: 2em;
-  list-style: none;
-  font: 600 2em "Myriad Pro Bold","Gill Sans","Impact",sans-serif;
-}
-/* line 93, ../sass/style.scss */
-.splashContent header #headline_container #abstract .oneliner {
-  display: inline;
-  margin-top: 1em;
-}
-/* line 98, ../sass/style.scss */
-.splashContent header #headline_container #ticker {
-  display: inline;
-  margin-top: 1em;
-}
-/* line 101, ../sass/style.scss */
-.splashContent header #headline_container #ticker li {
-  display: inline;
-  color: red;
-  list-style: none;
-  margin-left: 0em;
-}
-/* line 110, ../sass/style.scss */
-.splashContent #content {
-  height: auto;
-  width: 85%;
-  margin: auto;
-  text-align: center;
-}
-/* line 115, ../sass/style.scss */
-.splashContent #content h1 {
-  font: 600 3em "Myriad Pro Bold","Gill Sans","Impact",sans-serif;
-  color: #fff;
-  margin-top: 20%;
-  margin-bottom: 0.5em;
-  text-shadow: 1px 1px 3px #000;
-}
-/* line 122, ../sass/style.scss */
-.splashContent #content #signup {
-  width: 41em;
-  margin: auto;
-}
-/* line 126, ../sass/style.scss */
-.splashContent #content form {
-  text-align: center;
-  width: 36em;
-  margin: auto;
-}
-/* line 130, ../sass/style.scss */
-.splashContent #content form p {
-  font: 300 1em "Helvetica Neue" helvetica,sans-serif;
-  color: #fff;
-  text-shadow: 1px 1px 3px #000;
-  line-height: 2em;
-  float: left;
-}
-/* line 137, ../sass/style.scss */
-.splashContent #content form input {
-  float: left;
-  width: 12em;
-  border: 1px solid #999;
-  height: 2.2em;
-  -webkit-border-radius: 12px;
-  border-radius: 12px;
-  -webkit-background-clip: padding-box;
-  -moz-background-clip: padding;
-  background-clip: padding-box;
-  -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
-  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
-  margin-left: 0.5em;
-  margin-bottom: 0.5em;
-}
-/* line 153, ../sass/style.scss */
-.splashContent #content form .get-it {
-  float: left;
-  width: 5em;
-  background: #cd212b;
-  color: #fff;
-  height: 2em;
-  opacity: 1;
-  filter: alpha(opacity=100);
-  margin-top: 0.2em;
-}
-/* line 163, ../sass/style.scss */
-.splashContent #content form .get-it:hover {
-  background: #cc3333;
-  color: #fff;
-}
-/* line 169, ../sass/style.scss */
-.splashContent #links {
-  width: 84%;
-  z-index: 1;
-  color: #fff;
-  margin: auto;
-  margin-top: 25%;
-  padding-bottom: 2em;
-  font: 600 2em "Myriad Pro Bold","Gill Sans","Impact",sans-serif;
-  text-align: center;
-}
-/* line 178, ../sass/style.scss */
-.splashContent #links p {
-  float: left;
-  width: 33%;
-}
-/* line 183, ../sass/style.scss */
-.splashContent footer {
-  width: 100%;
-  height: 20%;
-  z-index: -1;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  /* Set the gradient at the bottom of the screen using rgba */
-  background-image: -webkit-gradient(linear, right bottom, right top, from(black), to(rgba(0, 0, 0, 0)));
-  background-image: -moz-linear-gradient(bottom, black 20%, rgba(0, 0, 0, 0) 95%);
-  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0,startColor=0,endColorStr=#000);
-  -ms-filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0,startColor=0,endColoStr=#000);
-}
+  margin: 0 auto; }
+  .siteContent #headline_container {
+    width: 760px;
+    margin: auto;
+    padding-top: 100px;
+    height: 15em; }
+    .siteContent #headline_container #masthead {
+      background: url(../img/logo.png) no-repeat;
+      background-repeat: no-repeat;
+      background-size: cover;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      width: 15em;
+      height: 15em;
+      float: left; }
+    .siteContent #headline_container #abstract {
+      width: 15em;
+      float: left;
+      margin-left: 1em;
+      text-align: left;
+      margin-top: 2em;
+      display: inline;
+      font: 600 2em "Myriad Pro Bold","Gill Sans","Impact",sans-serif; }
+    .siteContent #headline_container #ticker {
+      display: inline; }
+      .siteContent #headline_container #ticker li {
+        color: red;
+        list-style: none;
+        display: inline;
+        margin-left: -1.3em; }
+  .siteContent #links {
+    width: 960px;
+    height: auto;
+    margin: auto;
+    z-index: 1;
+    color: #fff;
+    margin-top: 100px;
+    margin-bottom: 1em;
+    font: 600 2em "Myriad Pro Bold","Gill Sans","Impact",sans-serif;
+    text-align: center; }
+    .siteContent #links a {
+      text-decoration: none;
+      float: left;
+      width: 320px; }
+  .siteContent #splashpage {
+    width: 85%;
+    margin: auto;
+    margin-top: 100px; }
+    .siteContent #splashpage h1 {
+      font: 600 3em "Myriad Pro Bold","Gill Sans","Impact",sans-serif;
+      color: #fff;
+      margin-bottom: 0.5em;
+      text-shadow: 1px 1px 3px #000;
+      text-align: center; }
+    .siteContent #splashpage form {
+      text-align: center;
+      width: 30em;
+      margin: auto;
+      height: 2.6em; }
+      .siteContent #splashpage form #firstinput {
+        border-radius: 1em 0em 0em 1em; }
+      .siteContent #splashpage form input {
+        float: left;
+        width: 12em;
+        height: 2.6em;
+        -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+        -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+        box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+        margin: 0em;
+        padding-left: 0.5em;
+        -webkit-border-radius: 0; }
+      .siteContent #splashpage form button {
+        float: none;
+        width: 5em;
+        background: #cd212b;
+        color: #fff;
+        height: 2.6em;
+        opacity: 1;
+        filter: alpha(opacity=100);
+        -webkit-border-radius: 0em 1em 1em 0em;
+        border-radius: 0em 1em 1em 0em; }
+  .siteContent #jobspage {
+    width: 85%;
+    height: 40em;
+    margin: auto;
+    font: 300 1em "Helvetica Neue",helvetica,sans-serif;
+    background: rgba(255, 255, 255, 0.8);
+    padding-left: 1em;
+    margin-top: 3em;
+    padding-right: 1em;
+    padding-top: 3em;
+    padding-bottom: 3em;
+    margin-bottom: 5em;
+    overflow: scroll; }
+    .siteContent #jobspage #masthead {
+      background: url(../img/logo.png) no-repeat;
+      background-repeat: no-repeat;
+      background-size: cover;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      width: 200px;
+      height: 200px;
+      display: block;
+      margin: auto; }
+    .siteContent #jobspage h1 {
+      font: 600 3em "Myriad Pro Bold","Gill Sans","Impact",sans-serif;
+      color: #666;
+      margin-bottom: 0.5em;
+      margin-top: 1em;
+      text-shadow: 1px 1px 3px #000;
+      display: block; }
+    .siteContent #jobspage h3 {
+      font: 500 1.1em "Helvetica Neue",helvetica,sans-serif;
+      font-style: italic;
+      color: #000;
+      margin-bottom: 1em; }
+    .siteContent #jobspage h2 {
+      font: 200 1.1em "Helvetica Neue",helvetica,sans-serif;
+      color: red; }
+    .siteContent #jobspage ul.jobdescription {
+      color: #222;
+      margin-left: 2em;
+      font: 200 1.2em "Helvetica Neue",helvetica,sans-serif; }
+  .siteContent #contactpage {
+    width: 85%;
+    height: 40em;
+    margin: auto;
+    font: 300 1em "Helvetica Neue",helvetica,sans-serif;
+    background: rgba(255, 255, 255, 0.8);
+    padding-left: 1em;
+    margin-top: 3em;
+    padding-right: 1em;
+    padding-top: 3em;
+    padding-bottom: 3em; }
+    .siteContent #contactpage #masthead {
+      background: url(../img/logo.png) no-repeat;
+      background-repeat: no-repeat;
+      background-size: cover;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      width: 200px;
+      height: 200px;
+      display: block;
+      margin: auto; }
+    .siteContent #contactpage #map {
+      width: 42em;
+      margin: auto;
+      margin-top: 6em; }
+      .siteContent #contactpage #map #googlemap {
+        float: left; }
+      .siteContent #contactpage #map #mapdescription {
+        float: left;
+        width: 20em;
+        margin-left: 2em; }
+        .siteContent #contactpage #map #mapdescription h1 {
+          font: 300 2em "Helvetica Neue",helvetica,sans-serif;
+          margin-top: 2em; }
+        .siteContent #contactpage #map #mapdescription a {
+          color: blue; }
 
 /* ==========================================================================
    Media Queries
    ========================================================================== */
 @media (width:1024px) {
-  /* line 203, ../sass/style.scss */
-  .splashContent header #headline_container {
-    padding-top: 1em;
-  }
-  /* line 205, ../sass/style.scss */
-  .splashContent header #headline_container #masthead {
-    height: 200px;
-    width: 200px;
-  }
-  /* line 209, ../sass/style.scss */
-  .splashContent header #headline_container #abstract {
-    margin-top: 1em;
-  }
-  /* line 212, ../sass/style.scss */
-  .splashContent header #headline_container #ticker {
-    margin-top: 0em;
-  }
-  /* line 218, ../sass/style.scss */
-  .splashContent #content h1 {
-    margin-top: 3em;
-  }
-  /* line 224, ../sass/style.scss */
-  .splashContent #links {
-    margin-top: 4em;
-  }
-}
-@media (min-width:768px) and (max-width:1023px) {
-  /* line 232, ../sass/style.scss */
-  .splashContent header #headline_container {
-    width: 95%;
-    padding-top: 1em;
-  }
-  /* line 235, ../sass/style.scss */
-  .splashContent header #headline_container #masthead {
-    height: 200px;
-    width: 200px;
-  }
-  /* line 239, ../sass/style.scss */
-  .splashContent header #headline_container #abstract {
-    width: 66%;
-    margin-top: 1.5em;
-  }
-  /* line 243, ../sass/style.scss */
-  .splashContent header #headline_container #ticker {
-    margin-top: 0em;
-  }
-  /* line 249, ../sass/style.scss */
-  .splashContent #content h1 {
-    margin-top: 5em;
-  }
-}
+  .siteContent {
+    height: 100%;
+    width: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; }
+    .siteContent #headline_container {
+      padding-top: 3em; }
+      .siteContent #headline_container #masthead {
+        height: 200px;
+        width: 200px; }
+    .siteContent #links {
+      margin-top: 5em; }
+    .siteContent #splashpage {
+      margin-top: 2em; } }
+@media (width:768px) {
+  .siteContent {
+    height: 100%;
+    width: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed; }
+    .siteContent #headline_container {
+      width: 760px;
+      padding-top: 4px; }
+      .siteContent #headline_container #masthead {
+        height: 200px;
+        width: 200px; }
+      .siteContent #headline_container #abstract {
+        width: 66%;
+        margin-top: 1.5em; }
+      .siteContent #headline_container #ticker {
+        margin-top: 0em; }
+    .siteContent #links {
+      width: 100%; }
+      .siteContent #links a {
+        width: 33%; }
+    .siteContent #splashpage h1 {
+      margin-top: 5em; } }
 @media (min-width:0) and (max-width:640px) {
-  /* line 260, ../sass/style.scss */
-  .splashContent header #headline_container {
+  .siteContent {
     width: 100%;
-    padding-top: 1em;
-    text-align: center;
-  }
-  /* line 264, ../sass/style.scss */
-  .splashContent header #headline_container #masthead {
-    height: 100px;
-    width: 100px;
-    float: none;
-    margin: auto;
-    margin-bottom: 1em;
-  }
-  /* line 271, ../sass/style.scss */
-  .splashContent header #headline_container #abstract {
-    font: 600 1em "Myriad Pro Bold","Gill Sans","Impact",sans-serif;
-    margin-top: 0;
-    float: none;
-    width: 100%;
-    margin-left: 0;
-    text-align: center;
-  }
-  /* line 279, ../sass/style.scss */
-  .splashContent header #headline_container #ticker {
-    color: red;
-    list-style: none;
-    margin-left: -2.2em;
-  }
-  /* line 286, ../sass/style.scss */
-  .splashContent #content {
-    width: 95%;
-    margin: auto;
-  }
-  /* line 289, ../sass/style.scss */
-  .splashContent #content h1 {
-    font: 600 1.5em "Myriad Pro Bold","Gill Sans","Impact",sans-serif;
-    margin-top: 6em;
-  }
-  /* line 293, ../sass/style.scss */
-  .splashContent #content #signup {
-    width: 65%;
-    margin: auto;
-  }
-  /* line 297, ../sass/style.scss */
-  .splashContent #content form {
-    width: 100%;
-    margin: auto;
-    text-align: center;
-  }
-  /* line 301, ../sass/style.scss */
-  .splashContent #content form p {
-    display: block;
-  }
-  /* line 304, ../sass/style.scss */
-  .splashContent #content form input {
-    width: 17em;
-    display: block;
-  }
-  /* line 308, ../sass/style.scss */
-  .splashContent #content form .get-it {
-    width: 17em;
-    height: 2em;
-  }
-  /* line 316, ../sass/style.scss */
-  .splashContent #links {
-    font: 600 1em "Myriad Pro Bold","Gill Sans","Impact",sans-serif;
-  }
+    height: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow: scroll; }
+    .siteContent #headline_container {
+      width: 295px;
+      height: auto;
+      padding-top: 2em;
+      text-align: left; }
+      .siteContent #headline_container #masthead {
+        float: left;
+        height: 110px;
+        width: 110px;
+        margin: auto;
+        margin-bottom: 1em; }
+      .siteContent #headline_container #abstract {
+        font: 600 16px "Myriad Pro Bold","Gill Sans","Impact",sans-serif;
+        margin-left: 16px;
+        float: left;
+        width: 164px; }
+      .siteContent #headline_container #ticker {
+        color: red;
+        list-style: none;
+        margin-left: -1.3em; }
+    .siteContent #links {
+      width: 100%;
+      height: auto;
+      margin: auto;
+      margin-bottom: 1em;
+      margin-top: 3em;
+      z-index: 1;
+      color: #fff;
+      font: 600 1em "Myriad Pro Bold","Gill Sans","Impact", sans-serif;
+      text-align: center; }
+      .siteContent #links a {
+        text-decoration: none;
+        float: left;
+        width: 33%; }
+    .siteContent #splashpage {
+      width: 95%;
+      margin: auto;
+      margin-top: 1em; }
+      .siteContent #splashpage h1 {
+        font: 600 1.5em "Myriad Pro Bold","Gill Sans","Impact",sans-serif; }
+      .siteContent #splashpage form {
+        width: 15em;
+        height: 7em;
+        margin: auto !important;
+        display: block; }
+        .siteContent #splashpage form #firstinput {
+          border-radius: 0; }
+        .siteContent #splashpage form p {
+          display: block; }
+        .siteContent #splashpage form input {
+          width: 15em;
+          height: 2em;
+          margin-bottom: 0.5em;
+          border: 2px solid #fff;
+          background-color: rgba(255, 255, 255, 0.5); }
+        .siteContent #splashpage form button {
+          width: 7em;
+          height: 2em;
+          border-radius: 0;
+          margin: auto !important;
+          border: 1px solid #fff; }
+    .siteContent #jobspage {
+      width: 95%;
+      height: auto;
+      margin: auto;
+      font: 300 1em "Helvetica Neue",helvetica,sans-serif;
+      background: rgba(255, 255, 255, 0.8);
+      padding-left: 1em;
+      margin-top: 3em;
+      padding-right: 1em;
+      padding-top: 3em;
+      padding-bottom: 3em; }
+      .siteContent #jobspage #masthead {
+        background: url(../img/logo.png) no-repeat;
+        background-repeat: no-repeat;
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        width: 100px;
+        height: 100px;
+        display: block;
+        margin: auto; }
+      .siteContent #jobspage h1 {
+        font: 600 1.5em "Myriad Pro Bold","Gill Sans","Impact",sans-serif; }
+      .siteContent #jobspage h3 {
+        font: 500 1em "Helvetica Neue",helvetica,sans-serif; }
+      .siteContent #jobspage h2 {
+        font: 200 1.1em "Helvetica Neue",helvetica,sans-serif;
+        color: red; }
+      .siteContent #jobspage ul.jobdescription {
+        margin-left: 1em;
+        font: 200 1em "Helvetica Neue",helvetica,sans-serif; } }
+/* =============================================================================
+   Links
+   ========================================================================== */
+a {
+  color: #fff; }
 
-  /* =============================================================================
-     Links
-     ========================================================================== */
-  /* line 324, ../sass/style.scss */
-  a {
-    color: #00e;
-  }
+a:visited {
+  color: #ccc; }
 
-  /* line 325, ../sass/style.scss */
-  a:visited {
-    color: #551a8b;
-  }
+a:hover {
+  color: #cc0000; }
 
-  /* line 326, ../sass/style.scss */
-  a:hover {
-    color: #06e;
-  }
+a:active {
+  color: #000; }
 
-  /* line 327, ../sass/style.scss */
-  a:focus {
-    outline: thin dotted;
-  }
+a:focus {
+  outline: thin dotted; }
 
-  /* Improve readability when focused and hovered in all browsers: h5bp.com/h */
-  /* line 330, ../sass/style.scss */
-  a:hover, a:active {
-    outline: 0;
-  }
+/* Improve readability when focused and hovered in all browsers: h5bp.com/h */
+a:hover, a:active {
+  outline: 0; }
 
-  /* =============================================================================
-     Typography
-     ========================================================================== */
-  /* line 338, ../sass/style.scss */
-  abbr[title] {
-    border-bottom: 1px dotted;
-  }
+/* =============================================================================
+   Typography
+   ========================================================================== */
+abbr[title] {
+  border-bottom: 1px dotted; }
 
-  /* line 340, ../sass/style.scss */
-  b, strong {
-    font-weight: bold;
-  }
+b, strong {
+  font-weight: bold; }
 
-  /* line 342, ../sass/style.scss */
-  blockquote {
-    margin: 1em 40px;
-  }
+blockquote {
+  margin: 1em 40px; }
 
-  /* line 344, ../sass/style.scss */
-  dfn {
-    font-style: italic;
-  }
+dfn {
+  font-style: italic; }
 
-  /* line 346, ../sass/style.scss */
-  hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
-  }
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0; }
 
-  /* line 348, ../sass/style.scss */
-  ins {
-    background: #ff9;
-    color: #000;
-    text-decoration: none;
-  }
+ins {
+  background: #ff9;
+  color: #000;
+  text-decoration: none; }
 
-  /* line 350, ../sass/style.scss */
-  mark {
-    background: #ff0;
-    color: #000;
-    font-style: italic;
-    font-weight: bold;
-  }
+mark {
+  background: #ff0;
+  color: #000;
+  font-style: italic;
+  font-weight: bold; }
 
-  /* Redeclare monospace font family: h5bp.com/j */
-  /* line 353, ../sass/style.scss */
-  pre, code, kbd, samp {
-    font-family: monospace, serif;
-    _font-family: 'courier new', monospace;
-    font-size: 1em;
-  }
+/* Redeclare monospace font family: h5bp.com/j */
+pre, code, kbd, samp {
+  font-family: monospace, serif;
+  _font-family: 'courier new', monospace;
+  font-size: 1em; }
 
-  /* Improve readability of pre-formatted text in all browsers */
-  /* line 356, ../sass/style.scss */
-  pre {
-    white-space: pre;
-    white-space: pre-wrap;
-    word-wrap: break-word;
-  }
+/* Improve readability of pre-formatted text in all browsers */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word; }
 
-  /* line 358, ../sass/style.scss */
-  q {
-    quotes: none;
-  }
+q {
+  quotes: none; }
 
-  /* line 359, ../sass/style.scss */
-  q:before, q:after {
-    content: "";
-    content: none;
-  }
+q:before, q:after {
+  content: "";
+  content: none; }
 
-  /* line 361, ../sass/style.scss */
-  small {
-    font-size: 85%;
-  }
+small {
+  font-size: 85%; }
 
-  /* Position subscript and superscript content without affecting line-height: h5bp.com/k */
-  /* line 364, ../sass/style.scss */
-  sub, sup {
-    font-size: 75%;
-    line-height: 0;
-    position: relative;
-    vertical-align: baseline;
-  }
+/* Position subscript and superscript content without affecting line-height: h5bp.com/k */
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
 
-  /* line 365, ../sass/style.scss */
-  sup {
-    top: -0.5em;
-  }
+sup {
+  top: -0.5em; }
 
-  /* line 366, ../sass/style.scss */
-  sub {
-    bottom: -0.25em;
-  }
+sub {
+  bottom: -0.25em; }
 
-  /* =============================================================================
-     Lists
-     ========================================================================== */
-  /* line 373, ../sass/style.scss */
-  ul, ol {
-    margin: 1em 0;
-    padding: 0 0 0 40px;
-  }
+/* =============================================================================
+   Lists
+   ========================================================================== */
+ul, ol {
+  margin: 1em 0;
+  padding: 0 0 0 40px; }
 
-  /* line 374, ../sass/style.scss */
-  dd {
-    margin: 0 0 0 40px;
-  }
+dd {
+  margin: 0 0 0 40px; }
 
-  /* line 375, ../sass/style.scss */
-  nav ul, nav ol {
-    list-style: none;
-    list-style-image: none;
-    margin: 0;
-    padding: 0;
-  }
+nav ul, nav ol {
+  list-style: none;
+  list-style-image: none;
+  margin: 0;
+  padding: 0; }
 
-  /* =============================================================================
-     Forms
-     ========================================================================== */
-  /* line 381, ../sass/style.scss */
-  form {
-    margin: 0;
-  }
+/* =============================================================================
+   Forms
+   ========================================================================== */
+form {
+  margin: 0; }
 
-  /* line 382, ../sass/style.scss */
-  fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
-  }
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0; }
 
-  /* Indicate that 'label' will shift focus to the associated form element */
-  /* line 385, ../sass/style.scss */
-  label {
-    cursor: pointer;
-  }
+/* Indicate that 'label' will shift focus to the associated form element */
+label {
+  cursor: pointer; }
 
-  /*
-   * 1. Correct color not inheriting in IE6/7/8/9
-   * 2. Correct alignment displayed oddly in IE6/7
-   */
-  /* line 392, ../sass/style.scss */
-  legend {
-    border: 0;
-    *margin-left: -7px;
-    padding: 0;
-    white-space: normal;
-  }
+/*
+ * 1. Correct color not inheriting in IE6/7/8/9
+ * 2. Correct alignment displayed oddly in IE6/7
+ */
+legend {
+  border: 0;
+  *margin-left: -7px;
+  padding: 0;
+  white-space: normal; }
 
-  /*
-   * 1. Correct font-size not inheriting in all browsers
-   * 2. Remove margins in FF3/4 S5 Chrome
-   * 3. Define consistent vertical alignment display in all browsers
-   */
-  /* line 400, ../sass/style.scss */
-  button, input, select, textarea {
-    font-size: 100%;
-    margin: 0;
-    vertical-align: baseline;
-    *vertical-align: middle;
-  }
+/*
+ * 1. Correct font-size not inheriting in all browsers
+ * 2. Remove margins in FF3/4 S5 Chrome
+ * 3. Define consistent vertical alignment display in all browsers
+ */
+button, input, select, textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  *vertical-align: middle; }
 
-  /*
-   * 1. Define line-height as normal to match FF3/4 (set using !important in the UA stylesheet)
-   */
-  /* line 406, ../sass/style.scss */
-  button, input {
-    line-height: normal;
-  }
+/*
+ * 1. Define line-height as normal to match FF3/4 (set using !important in the UA stylesheet)
+ */
+button, input {
+  line-height: normal; }
 
-  /*
-   * 1. Display hand cursor for clickable form elements
-   * 2. Allow styling of clickable form elements in iOS
-   * 3. Correct inner spacing displayed oddly in IE7 (doesn't effect IE6)
-   */
-  /* line 414, ../sass/style.scss */
-  button, input[type="button"], input[type="reset"], input[type="submit"] {
-    cursor: pointer;
-    -webkit-appearance: button;
-    *overflow: visible;
-  }
+/*
+ * 1. Display hand cursor for clickable form elements
+ * 2. Allow styling of clickable form elements in iOS
+ * 3. Correct inner spacing displayed oddly in IE7 (doesn't effect IE6)
+ */
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: button;
+  *overflow: visible; }
 
-  /*
-   * Re-set default cursor for disabled elements
-   */
-  /* line 420, ../sass/style.scss */
-  button[disabled], input[disabled] {
-    cursor: default;
-  }
+/*
+ * Re-set default cursor for disabled elements
+ */
+button[disabled], input[disabled] {
+  cursor: default; }
 
-  /*
-   * Consistent box sizing and appearance
-   */
-  /* line 426, ../sass/style.scss */
-  input[type="checkbox"], input[type="radio"] {
-    box-sizing: border-box;
-    padding: 0;
-    *width: 13px;
-    *height: 13px;
-  }
+/*
+ * Consistent box sizing and appearance
+ */
+input[type="checkbox"], input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+  *width: 13px;
+  *height: 13px; }
 
-  /* line 427, ../sass/style.scss */
-  input[type="search"] {
-    -webkit-appearance: textfield;
-    -moz-box-sizing: content-box;
-    -webkit-box-sizing: content-box;
-    box-sizing: content-box;
-  }
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box; }
 
-  /* line 428, ../sass/style.scss */
-  input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-search-cancel-button {
-    -webkit-appearance: none;
-  }
+input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none; }
 
-  /*
-   * Remove inner padding and border in FF3/4: h5bp.com/l
-   */
-  /* line 434, ../sass/style.scss */
-  button::-moz-focus-inner, input::-moz-focus-inner {
-    border: 0;
-    padding: 0;
-  }
+/*
+ * Remove inner padding and border in FF3/4: h5bp.com/l
+ */
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
 
-  /*
-   * 1. Remove default vertical scrollbar in IE6/7/8/9
-   * 2. Allow only vertical resizing
-   */
-  /* line 441, ../sass/style.scss */
-  textarea {
-    overflow: auto;
-    vertical-align: top;
-    resize: vertical;
-  }
+/*
+ * 1. Remove default vertical scrollbar in IE6/7/8/9
+ * 2. Allow only vertical resizing
+ */
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical; }
 
-  /* Colors for form validity */
-  /* line 445, ../sass/style.scss */
-  input:invalid, textarea:invalid {
-    background-color: #f0dddd;
-  }
+/* Colors for form validity */
+input:invalid, textarea:invalid {
+  background-color: #f0dddd; }
 
-  /* =============================================================================
-     Tables
-     ========================================================================== */
-  /* line 452, ../sass/style.scss */
-  table {
-    border-collapse: collapse;
-    border-spacing: 0;
-  }
+/* =============================================================================
+   Tables
+   ========================================================================== */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
 
-  /* line 453, ../sass/style.scss */
-  td {
-    vertical-align: top;
-  }
+td {
+  vertical-align: top; }
 
-  /* ==|== non-semantic helper classes ========================================
-     Please define your styles before this section.
-     ========================================================================== */
-  /* For image replacement */
-  /* line 460, ../sass/style.scss */
-  .ir {
-    display: block;
-    border: 0;
-    text-indent: -999em;
-    overflow: hidden;
-    background-color: transparent;
-    background-repeat: no-repeat;
-    text-align: left;
-    direction: ltr;
-    *line-height: 0;
-  }
+/* ==|== non-semantic helper classes ========================================
+   Please define your styles before this section.
+   ========================================================================== */
+/* For image replacement */
+.ir {
+  display: block;
+  border: 0;
+  text-indent: -999em;
+  overflow: hidden;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  text-align: left;
+  direction: ltr;
+  *line-height: 0; }
 
-  /* line 461, ../sass/style.scss */
-  .ir br {
-    display: none;
-  }
+.ir br {
+  display: none; }
 
-  /* Hide from both screenreaders and browsers: h5bp.com/u */
-  /* line 464, ../sass/style.scss */
-  .hidden {
-    display: none !important;
-  }
+/* Hide from both screenreaders and browsers: h5bp.com/u */
+.hidden {
+  display: none !important; }
 
-  /* Hide only visually, but have it available for screenreaders: h5bp.com/v */
-  /* line 467, ../sass/style.scss */
-  .visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-  }
+/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
 
-  /* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
-  /* line 470, ../sass/style.scss */
-  .visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
-  }
+/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto; }
 
-  /* Hide visually and from screenreaders, but maintain layout */
-  /* line 473, ../sass/style.scss */
-  .invisible {
-    visibility: hidden;
-  }
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible {
+  visibility: hidden; }
 
-  /* Contain floats: h5bp.com/q */
-  /* line 476, ../sass/style.scss */
-  .clearfix:before, .clearfix:after {
-    content: "";
-    display: table;
-  }
+/* Contain floats: h5bp.com/q */
+.clearfix:before, .clearfix:after {
+  content: "";
+  display: table; }
 
-  /* line 477, ../sass/style.scss */
-  .clearfix:after {
-    clear: both;
-  }
+.clearfix:after {
+  clear: both; }
 
-  /* line 478, ../sass/style.scss */
-  .clearfix {
-    *zoom: 1;
-  }
-
-  /* ===========================================================
-     Print styles.
-     ========================================================================== */
-}
-@media (min-width:0) and (max-width:640px) and print {
-  /* line 484, ../sass/style.scss */
-  * {
-    background: transparent !important;
-    color: black !important;
-    box-shadow: none !important;
-    text-shadow: none !important;
-    filter: none !important;
-    -ms-filter: none !important;
-  }
-
-  /* Black prints faster:h5bp.c\om/s */
-  /* line 493, ../sass/style.scss */
-  a, a:visited {
-    text-decoration: underline;
-  }
-
-  /* line 496, ../sass/style.scss */
-  a[href]:after {
-    content: " (" attr(href) ")";
-  }
-
-  /* line 499, ../sass/style.scss */
-  abbr[title]:after {
-    content: " (" attr(title) ")";
-  }
-
-  /* line 502, ../sass/style.scss */
-  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
-    content: "";
-  }
-
-  /* Don't show links for images,or javascript/internal links */
-  /* line 506, ../sass/style.scss */
-  pre, blockquote {
-    border: 1px solid #999;
-    page-break-inside: avoid;
-  }
-
-  /* line 506, ../sass/style.scss */
-  thead {
-    display: table-header-group;
-  }
-
-  /* h5bp.com/t */
-  /* line 507, ../sass/style.scss */
-  tr, img {
-    page-break-inside: avoid;
-  }
-
-  /* line 507, ../sass/style.scss */
-  img {
-    max-width: 100% !important;
-  }
-
-  @page {
-    margin: 0.5cm;
-}
-
-  /* line 507, ../sass/style.scss */
-  p, h2, h3 {
-    orphans: 3;
-    widows: 3;
-  }
-
-  /* line 507, ../sass/style.scss */
-  h2, h3 {
-    page-break-after: avoid;
-  }
-}
+.clearfix {
+  *zoom: 1; }
