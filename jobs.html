@@ -19,55 +19,65 @@
 <link rel="stylesheet" href="css/style.css">
 <link rel="icon" type="image/png" href="img/favicon.png">
 </head>
-<body class="siteContent">
+<body>
 <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http:\                                                   \
 //www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
-<div id="jobspage">
-	<a href="/"><div id="masthead">
-	</div></a>
-	<div class="clear_float">
+<div class="siteContent">
+	<div id="jobspage">
+		<a href="/">
+		<div id="masthead">
+		</div>
+		</a>
+		<a href="javascript:void(0)" onclick="document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">
+			<h1>Analytics Engineer</h1>
+		</a>
+		<div id="light" class="white_content">
+			<h1>Analytics Engineer</h1>
+			<h3>Are you looking for an exciting, ground-floor opportunity and the ability to have a major impact on a product and company?</h3>
+			<h3>Do you think that using analytics and data-mining techniques to tame the fire-hose of data continually flowing by us is interesting?</h3>
+			<h2>Your responsibilities as our Analytics Engineer:</h2>
+			<ul class="jobdescription">
+				<li>Collaborate around the creation of new and existing features. </li>
+				<li>Identity opportunities for highlighting signals among all the noise.</li>
+				<li>Use your natural language text processing skills to tell stories </li>
+				<li>Create and maintain backend analytical services and APIs. </li>
+			</ul>
+			<h2>The experience we’d like to see from you:</h2>
+			<ul class="jobdescription">
+				<li>B.S., M.S., or Ph.D. in Computer Science or equivalent.</li>
+				<li>Extraordinary software engineering talent: data structures, algorithms, design, extensibility, maintainability</li>
+				<li>Professional experience designing solutions using Map/Reduce and working with Hadoop</li>
+				<li>Experience working with an analytical programming language like R</li>
+				<li>Expert ability to get things done with a small team</li>
+				<li>Professional experience working with Python, MySQL, Java, MongoDB, Cassandra, Apache</li>
+				<li>Expert ability to get things done with a small team</li>
+				<li>Ability to scale a small startup to a high traffic web application</li>
+				<li>3-5 years professional experience</li>
+				<li>Experience with Linux (Ubuntu, CentOS, etc.)</li>
+			</ul>
+			<h2>Benefits and Perks</h2>
+			<ul class="jobdescription">
+				<li>Salary and equity </li>
+				<li>Medical/dental/vision/life insurance benefits </li>
+				<li>Dog-friendly, tragically-hip office in SOMA by South Park </li>
+				<li>Free lunches </li>
+				<li>Flexible, lean startup environment </li>
+			</ul>
+			<h2>Please apply to jobs@thisis.me in the first instance, with your CV and salary expectations.</h2>
+			<a href ='' "javascript:void(0)" onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">Close</a>
+		</div>
+		<div id="fade" class="black_overlay">
+		</div>
 	</div>
-	<h1>Analytics Engineer</h1>
-	<h3>Are you looking for an exciting, ground-floor opportunity and the ability to have a major impact on a product and company?</h3>
-	<h3>Do you think that using analytics and data-mining techniques to tame the fire-hose of data continually flowing by us is interesting?</h3>
-	<h2>Your responsibilities as our Analytics Engineer:</h2>
-	<ul class="jobdescription">
-		<li>Collaborate around the creation of new and existing features.       </li>
-		<li>Identity opportunities for highlighting signals among all the noise.</li>
-		<li>Use your natural language text processing skills to tell stories    </li>
-		<li>Create and maintain backend analytical services and APIs.           </li>
-	</ul>
-	<h2>The experience we’d like to see from you:</h2>
-	<ul class="jobdescription">                                                                                                               
-		<li>B.S., M.S., or Ph.D. in Computer Science or equivalent.</li>
-		<li>Extraordinary software engineering talent: data structures, algorithms, design, extensibility, maintainability</li>
-		<li>Professional experience designing solutions using Map/Reduce and working with Hadoop</li>
-		<li>Experience working with an analytical programming language like R</li>
-		<li>Expert ability to get things done with a small team</li>
-		<li>Professional experience working with Python, MySQL, Java, MongoDB, Cassandra, Apache</li>
-		<li>Expert ability to get things done with a small team</li>
-		<li>Ability to scale a small startup to a high traffic web application</li>
-		<li>3-5 years professional experience</li>
-		<li>Experience with Linux (Ubuntu, CentOS, etc.)</li>
-	</ul>
-	<h2>Benefits and Perks</h2>
-	<ul class="jobdescription">
-		<li>Salary and equity                                           </li>
-		<li>Medical/dental/vision/life insurance benefits               </li>
-		<li>Dog-friendly, tragically-hip office in SOMA by South Park   </li>
-		<li>Free lunches                                                </li>
-		<li>Flexible, lean startup environment                          </li>
-	</ul>
-	<h2>Please apply to jobs@thisis.me in the first instance, with your CV and salary expectations.</h2>
+	<div id="links">
+		<a href="/">Home</a>
+		<a href="/jobs.html">Jobs</a>
+		<a href="/contact.html">Contact</a>
+	</div>
 </div>
-
-<div class="links">
-	<a href="http://ec2-50-18-20-224.us-west-1.compute.amazonaws.com/blog">Blog</a>
-	<a href="/jobs.html">Jobs</a>
-	<a href="/contact.html">Contact</a>
-</div>
-<footer>
-</footer>
+<p class="copy">
+	Copyright &copy; 2012 This.is Me. All Rights Reserved.
+</p>
 <!-- SCRIPTS -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script src="js/jquery.validationEngine-en.js" type="text/javascript" charset="utf-8"></script>
@@ -78,7 +88,6 @@ $(document).ready(function() {
     $("ul#ticker").removeClass("hidden"),
 	window.scrollTo(0, 0);
 });
-
 </script>
 <script src="js/plugins.js"></script>
 <!-- google analytics -->

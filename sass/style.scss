@@ -84,6 +84,7 @@ figure {
    Author: Cameron Drake
    ========================================================================== */
 $topspace:100px;
+$thisisred: rgba(188,36,49,1);
 .siteContent {
 	z-index:0;
 	width:960px;
@@ -118,7 +119,7 @@ $topspace:100px;
 		#ticker {
 			display:inline;
 			li {
-				color:red;
+				color:$thisisred;
 				list-style:none;
 				display:inline;
 				margin-left:-1.3em;
@@ -143,11 +144,12 @@ $topspace:100px;
 	}
 	#splashpage {
 		width:85%;
+		height:43em;
 		margin:auto;
-		margin-top:$topspace;
 		h1 {
 			font:600 3em "Myriad Pro Bold","Gill Sans","Impact",sans-serif;
 			color:#fff;
+			margin-top:3em;
 			margin-bottom:0.5em;
 			text-shadow:1px 1px 3px #000;
 			text-align:center;
@@ -157,6 +159,7 @@ $topspace:100px;
 			width:30em;
 			margin:auto;
 			height:2.6em;
+			margin-bottom:225px;
 			#firstinput {
 				border-radius:1em 0em 0em 1em;
 			}
@@ -174,11 +177,9 @@ $topspace:100px;
 			button {
 				float:none;
 				width:5em;
-				background:#cd212b;
+				background:$thisisred;
 				color:#fff;
 				height:2.6em;
-				opacity:1;
-				filter:alpha(opacity=100);
 				-webkit-border-radius:0em 1em 1em 0em;
 				border-radius:0em 1em 1em 0em;
 			}
@@ -189,14 +190,10 @@ $topspace:100px;
 		height:40em;
 		margin:auto;
 		font:300 1em "Helvetica Neue",helvetica,sans-serif;
-		background:rgba(255,255,255,0.8);
 		padding-left:1em;
-		margin-top:3em;
 		padding-right:1em;
 		padding-top:3em;
-		padding-bottom:3em;
-		margin-bottom:5em;
-		overflow:scroll;
+		text-align:center;
 		#masthead {
 			background:url(../img/logo.png) no-repeat;
 			background-repeat:no-repeat;
@@ -208,12 +205,15 @@ $topspace:100px;
 			height:200px;
 			display:block;
 			margin:auto;
+			margin-bottom:2em;
+		}
+		a {
+			text-decoration:none;
 		}
 		h1 {
 			font:600 3em "Myriad Pro Bold","Gill Sans","Impact",sans-serif;
-			color:#666;
+			color:$thisisred;
 			margin-bottom:0.5em;
-			margin-top:1em;
 			text-shadow:1px 1px 3px #000;
 			display:block;
 		}
@@ -225,7 +225,7 @@ $topspace:100px;
 		}
 		h2 {
 			font:200 1.1em "Helvetica Neue",helvetica,sans-serif;
-			color:red;
+			color:$thisisred;
 		}
 		ul.jobdescription {
 			color:#222;
@@ -240,10 +240,8 @@ $topspace:100px;
 		font:300 1em "Helvetica Neue",helvetica,sans-serif;
 		background:rgba(255,255,255,0.8);
 		padding-left:1em;
-		margin-top:3em;
 		padding-right:1em;
 		padding-top:3em;
-		padding-bottom:3em;
 		#masthead {
 			background:url(../img/logo.png) no-repeat;
 			background-repeat:no-repeat;
@@ -257,7 +255,7 @@ $topspace:100px;
 			margin:auto;
 		}
 		#map {
-			width:42em;
+			width:85%;
 			margin:auto;
 			margin-top:6em;
 			#googlemap {
@@ -265,7 +263,7 @@ $topspace:100px;
 			}
 			#mapdescription {
 				float:left;
-				width:20em;
+				width:9em;
 				margin-left:2em;
 				h1 {
 					font:300 2em "Helvetica Neue",helvetica,sans-serif;
@@ -277,6 +275,37 @@ $topspace:100px;
 			}
 		}
 	}
+}
+.copy {
+	font-size:12px;
+	font-weight:100;
+	text-align:center;
+	color:$thisisred;
+}
+.black_overlay{
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(255,255,255,0.8);
+	z-index:1001;
+}
+ 
+.white_content {
+	display: none;
+	text-align:left;
+	position: absolute;
+	top: 15%;
+	left: 15%;
+	width: 800px;
+	height: 800px;
+	padding: 16px;
+	border: 5px solid $thisisred;
+	background-color: white;
+	z-index:1002;
+	overflow: auto;
 }
 /* ==========================================================================
    Media Queries
@@ -300,12 +329,35 @@ $topspace:100px;
 			#ticker {
 			}
 		}
-		#links {
-			margin-top:5em;
-		}
 		#splashpage {
-			margin-top:2em;
+			height:33em;
+			h1 {
+				margin-top:1em;
+			}
+			form {
+				margin-bottom:0;
+			}
 		}
+		#jobspage {
+			height:30em;
+		}
+		#contactpage {
+			height:30em;
+			background:none;
+			#map {
+				margin-top:2em;
+			}
+		}
+	}
+	.copy {
+		display:none;
+	}
+	.white_content {
+		top: 5%;
+		left: 5%;
+		width: 85%;
+		height: 95%;
+		padding: 16px;
 	}
 }
 @media (width:768px) {
@@ -332,19 +384,28 @@ $topspace:100px;
 				margin-top:0em;
 			}
 		}
+		#splashpage {
+			height:35em;
+			h1 {
+				margin-top: 5em;
+			}
+			form {
+				margin-bottom:0;
+			}
+		}
+		#jobspage {
+		}
+		#contactpage {
+		}
 		#links {
 			width:100%;
 			a {
 				width:33%;
 			}
 		}
-		#splashpage {
-			h1 {
-				margin-top: 5em;
-			}
-			form {
-			}
-		}
+	}
+	.copy {
+		display:none;
 	}
 }
 @media (min-width:0) and (max-width:640px) {
@@ -376,7 +437,7 @@ $topspace:100px;
 				width:164px;
 			}
 			#ticker {
-				color:red;
+				color:$thisisred;
 				list-style:none;
 				margin-left:-1.3em;
 			}
@@ -399,6 +460,7 @@ $topspace:100px;
 		}
 		#splashpage {
 			width:95%;
+			height:auto;
 			margin:auto;
 			margin-top:1em;
 			h1 {
@@ -409,6 +471,7 @@ $topspace:100px;
 				height:7em;
 				margin:auto !important;
 				display:block;
+				margin-bottom:0;
 				#firstinput {
 					border-radius:0;
 				}
@@ -436,12 +499,6 @@ $topspace:100px;
 			height:auto;
 			margin:auto;
 			font:300 1em "Helvetica Neue",helvetica,sans-serif;
-			background:rgba(255,255,255,0.8);
-			padding-left:1em;
-			margin-top:3em;
-			padding-right:1em;
-			padding-top:3em;
-			padding-bottom:3em;
 			#masthead {
 				background:url(../img/logo.png) no-repeat;
 				background-repeat:no-repeat;
@@ -453,6 +510,7 @@ $topspace:100px;
 				height:100px;
 				display:block;
 				margin:auto;
+				margin-bottom:2em;
 			}
 			h1 {
 				font:600 1.5em "Myriad Pro Bold","Gill Sans","Impact",sans-serif;
@@ -462,14 +520,33 @@ $topspace:100px;
 			}
 			h2 {
 				font:200 1.1em "Helvetica Neue",helvetica,sans-serif;
-				color:red;
+				color:$thisisred;
 			}
 			ul.jobdescription {
 				margin-left:1em;
 				font:200 1em "Helvetica Neue",helvetica,sans-serif;
 			}
 		}
+		#contactpage {
+			#map {
+				margin-top:0;
+				#googlemap {
+					display:none;
+				}
+			}
+		}
 	} 
+	.copy {
+		display:none;
+	}
+	.white_content {
+		display: none;
+		text-align:left;
+		position: absolute;
+		top: 3%;
+		left: 3%;
+		width: 82%;
+	}
 }
 /* =============================================================================
    Links
@@ -477,7 +554,7 @@ $topspace:100px;
 
 a { color: #fff; }
 a:visited { color: #ccc; }
-a:hover { color: #cc0000; }
+a:hover { color: $thisisred; }
 a:active { color:#000;}
 a:focus { outline: thin dotted; }
 
