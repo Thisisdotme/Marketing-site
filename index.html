@@ -18,6 +18,22 @@
 <script src="js/libs/modernizr-2.5.3.min.js"></script>
 <link rel="stylesheet" href="css/style.css">
 <link rel="icon" type="image/png" href="img/favicon.png">
+<style>
+
+#splashpage #reserve-form input.valid {
+  background-image:url(../img/checkmark.jpg);
+  background-repeat: no-repeat;
+  background-position: 95% center;
+}
+
+#splashpage #reserve-form input.not-valid {
+  background-image:url(../img/red-x.png);
+  background-repeat: no-repeat;
+  background-position: 95% center;
+}
+
+
+</style>
 </head>
 <body>
 <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http:\                                                   \
@@ -41,10 +57,10 @@
 		<div class="clear_float">
 		</div>
 		<h1>reserve your username</h1>
-		<form name="emails" action="" method="POST">
-			<input type="text" onfocus="if(this.value == 'yourname') { this.value = ''; } " onblur="if(this.value == '') { this.value = 'yourname'; } " value="yourname" id="firstinput">
-			<input type="text" onfocus="if(this.value == 'email address') { this.value = ''; }" onblur="if(this.value == '') { this.value = 'email address'; } " value="email address">
-			<button type="button">reserve</button>
+		<form id="reserve-form" name="emails" action="" method="POST" onsubmit="">
+			<input type="text" autocapitalize="off" autocorrect="off" onfocus="if(this.value == 'yourname') { this.value = ''; } " onblur="if(this.value == '') { this.value = 'yourname'; } " value="yourname" id="firstinput" maxlength="16">
+			<input type="text" autocapitalize="off" autocorrect="off" onfocus="if(this.value == 'email address') { this.value = ''; }" onblur="if(this.value == '') { this.value = 'email address'; } " value="email address" id="emailinput">
+			<button type="submit">reserve</button>
 		</form>
 	</div>
 	<div class="clear_float">
@@ -54,6 +70,9 @@
 		<a href="/jobs.html">Jobs</a>
 		<a href="/contact.html">Contact</a>
 	</div>
+	<div id="availability"></div>
+	<div id="email-valid"></div>
+	<div id="status-message"></div>
 </div>
 <p class="copy">Copyright &copy; 2012 This.is Me. All Rights Reserved.</p>
 <!-- SCRIPTS -->
@@ -62,9 +81,127 @@
 <script src="js/jquery.validationEngine.js" type="text/javascript" charset="utf-8"></script>
 <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')</script>
 <script>
+var TIM = TIM || {};
+TIM.baseApiUrl = "http://api.thisis.me/v1/";
+var authornameCache = {};
+
 $(document).ready(function() {
-    $("ul#ticker").removeClass("hidden"),
+  var requestInProgress = false;
+	var authornameAvailable = false;
+	var emailValid = false;
+  
+  $("ul#ticker").removeClass("hidden"),
 	window.scrollTo(0, 0);
+	
+	$('#firstinput').keyup(function(event) {
+	  var authorname = $('#firstinput').val();
+
+	  if(!validateAuthorname(authorname)) {
+	    setAvailability(false);
+	    return;
+	  }
+	  if(authornameCache["" + authorname]) {
+      setAvailability(authornameCache["" + authorname].available);
+      return;
+	  }
+	  if(!requestInProgress) {
+	    requestInProgress = true;
+	    $.ajax({
+	      type: "get",
+	      dataType: "text",
+  	    url: TIM.baseApiUrl + "reservation/" + authorname,
+  	    success: function(json, textStatus) {
+  	      setAvailability(false);
+  	      authornameCache["" + authorname] = {available: false};
+        },
+        error: function(xOptions, textStatus) {
+          setAvailability(true); //only if not found
+          authornameCache["" + authorname] = {available: true};
+        },
+      });
+	  }
+	  
+	  function validateAuthorname(authorname) { 
+      var re = /^[a-zA-Z0-9_]+$/;
+      return re.test(authorname);
+    }
+	  
+	  function setAvailability(available) {
+	    if(available) {
+	      authornameAvailable = true;
+        $('#firstinput').addClass('valid').removeClass('not-valid');
+	    } else {
+	       $('#firstinput').addClass('not-valid').removeClass('valid');
+         authornameAvailable = false;
+	    }
+	    requestInProgress  = false;
+	  }
+
+	  return false;
+	  
+	});
+	
+	
+	$('#emailinput').keyup(function(event) {
+	  var email = $('#emailinput').val();
+	  if(email.length < 1) {
+	    emailValid = false;
+	    $('#email-valid').removeClass('yes')
+	    return;
+	  }
+	  
+	  function validateEmail(email) { 
+      var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      return re.test(email);
+    }
+    
+    if (validateEmail(email)) {
+       $('#emailinput').addClass('valid').removeClass('not-valid');
+       emailValid = true;
+    } else {
+      $('#emailinput').removeClass('valid').addClass('not-valid');
+      emailValid = false;
+    }
+	  	  
+	});
+	
+	$('#reserve-form').on('submit', function(event) {
+    
+    if(!authornameAvailable || !emailValid) {
+      console.log(authornameAvailable, emailValid);
+      return false;
+    }
+    
+    var authorname = $('#firstinput').val();
+	  var email = $('#emailinput').val();
+    var emailJSON = {
+      email: email
+    }
+    
+	  if(!requestInProgress) {
+	    requestInProgress = true;
+	    $.ajax({
+	      type: "put",
+  	    url: TIM.baseApiUrl + "reservation/" + authorname,
+  	    data: JSON.stringify(emailJSON),
+  	    success: function(json, textStatus) {
+  	      console.log(json, textStatus);
+  	      alert("Congratulations!  We've received your request to reserve the name " + authorname); //$('#status-message').addClass('yes').html('Congratulations!  You reserved the name ' + authorname);
+          
+          requestInProgress  = false;
+        },
+        error: function(json, textStatus, err) {
+          alert('This username/email combination is not available');
+          requestInProgress  = false;
+        }
+      });
+	  }
+
+	  return false;
+	  
+	});
+	
+	
 });
 
 </script>
