@@ -65,4 +65,127 @@ $(document).ready(function(){
     };
 })(jQuery);
 
+// Username and Email Validation be Ken Lenga
 
+var TIM = TIM || {};
+TIM.baseApiUrl = "http://api.thisis.me/v1/";
+var authornameCache = {};
+
+$(document).ready(function() {
+  var requestInProgress = false;
+	var authornameAvailable = false;
+	var emailValid = false;
+  
+  $("ul#ticker").removeClass("hidden"),
+	window.scrollTo(0, 0);
+	
+	$('#firstinput').keyup(function(event) {
+	  var authorname = $('#firstinput').val();
+
+	  if(!validateAuthorname(authorname)) {
+	    setAvailability(false);
+	    return;
+	  }
+	  if(authornameCache["" + authorname]) {
+      setAvailability(authornameCache["" + authorname].available);
+      return;
+	  }
+	  if(!requestInProgress) {
+	    requestInProgress = true;
+	    $.ajax({
+	      type: "get",
+	      dataType: "text",
+  	    url: TIM.baseApiUrl + "reservation/" + authorname,
+  	    success: function(json, textStatus) {
+  	      setAvailability(false);
+  	      authornameCache["" + authorname] = {available: false};
+        },
+        error: function(xOptions, textStatus) {
+          setAvailability(true); //only if not found
+          authornameCache["" + authorname] = {available: true};
+        },
+      });
+	  }
+	  
+	  function validateAuthorname(authorname) { 
+      var re = /^[a-zA-Z0-9_]+$/;
+      return re.test(authorname);
+    }
+	  
+	  function setAvailability(available) {
+	    if(available) {
+	      authornameAvailable = true;
+        $('#firstinput').addClass('valid').removeClass('not-valid');
+	    } else {
+	       $('#firstinput').addClass('not-valid').removeClass('valid');
+         authornameAvailable = false;
+	    }
+	    requestInProgress  = false;
+	  }
+
+	  return false;
+	  
+	});
+	
+	
+	$('#emailinput').keyup(function(event) {
+	  var email = $('#emailinput').val();
+	  if(email.length < 1) {
+	    emailValid = false;
+	    $('#email-valid').removeClass('yes')
+	    return;
+	  }
+	  
+	  function validateEmail(email) { 
+      var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      return re.test(email);
+    }
+    
+    if (validateEmail(email)) {
+       $('#emailinput').addClass('valid').removeClass('not-valid');
+       emailValid = true;
+    } else {
+      $('#emailinput').removeClass('valid').addClass('not-valid');
+      emailValid = false;
+    }
+	  	  
+	});
+	
+	$('#reserve-form').on('submit', function(event) {
+    
+    if(!authornameAvailable || !emailValid) {
+      console.log(authornameAvailable, emailValid);
+      return false;
+    }
+    
+    var authorname = $('#firstinput').val();
+	  var email = $('#emailinput').val();
+    var emailJSON = {
+      email: email
+    }
+    
+	  if(!requestInProgress) {
+	    requestInProgress = true;
+	    $.ajax({
+	      type: "put",
+  	    url: TIM.baseApiUrl + "reservation/" + authorname,
+  	    data: JSON.stringify(emailJSON),
+  	    success: function(json, textStatus) {
+  	      console.log(json, textStatus);
+  	      alert("Congratulations!  We've received your request to reserve the name " + authorname); //$('#status-message').addClass('yes').html('Congratulations!  You reserved the name ' + authorname);
+          
+          requestInProgress  = false;
+        },
+        error: function(json, textStatus, err) {
+          alert('This username/email combination is not available');
+          requestInProgress  = false;
+        }
+      });
+	  }
+
+	  return false;
+	  
+	});
+	
+	
+});
