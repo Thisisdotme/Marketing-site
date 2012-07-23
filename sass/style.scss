@@ -532,9 +532,9 @@ figure {
 		background-attachment:fixed;
 		overflow:scroll;
 		#headline_container {
-			width:295px;
+			width:265px;
 			height:110px;
-			padding-top:2em;
+			padding-top:1em;
 			text-align:left;
 			#masthead {
 				float:left;
@@ -547,7 +547,7 @@ figure {
 				font:600 16px "futura-pt", sans-serif;
 				margin-left:16px;
 				float:left;
-				width:164px;
+				width:135px;
 			}
 			#ticker {
 				color:$thisisred;
@@ -617,7 +617,7 @@ figure {
 				height:10em;
 				margin:auto;
 				margin-top:1em;
-				padding:1em;
+				padding:0em;
 				width:100%;
 				overflow:scroll;
 				h1 {
@@ -655,7 +655,7 @@ figure {
 			}
 		}
 		#contactpage {
-			width:200px;
+			width:295px;
 			height:20em;
 			margin:auto;
 			font:300 1em "Helvetica Neue",helvetica,sans-serif;
@@ -664,7 +664,7 @@ figure {
 				width:100%;
 				margin:auto;
 				margin-top:1em;
-				padding:1em;
+				padding:0em;
 			}
 			#map {
 				margin-top:0;
