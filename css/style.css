@@ -90,22 +90,22 @@ figure {
 .siteContent {
   z-index: 0;
   width: 960px;
-  height: 880px;
+  height: 760px;
   background: url(../img/photo23.jpg) no-repeat;
   margin: 0 auto; }
   .siteContent #headline_container {
     width: 760px;
     margin: auto;
-    padding-top: 3em;
-    height: 15em; }
+    padding-top: 1em;
+    height: 200px; }
     .siteContent #headline_container #masthead {
       background: url(../img/logo.png) no-repeat;
       background-size: cover;
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
-      width: 15em;
-      height: 15em;
+      width: 200px;
+      height: 200px;
       float: left; }
     .siteContent #headline_container #abstract {
       width: 15em;
@@ -114,7 +114,7 @@ figure {
       text-align: left;
       margin-top: 2em;
       display: inline;
-      font: 600 2em "futura-pt", sans-serif; }
+      font: 600 2em "futura-pt"; }
     .siteContent #headline_container #ticker {
       display: inline; }
       .siteContent #headline_container #ticker li {
@@ -128,9 +128,9 @@ figure {
     margin: auto;
     z-index: 1;
     color: #fff;
-    margin-top: 3em;
+    margin-top: 1em;
     margin-bottom: 1em;
-    font: 600 2em "futura-pt", sans-serif;
+    font: 600 2em "futura-pt";
     text-align: center; }
     .siteContent #links a {
       text-decoration: none;
@@ -138,12 +138,12 @@ figure {
       width: 320px; }
   .siteContent #splashpage {
     width: 85%;
-    height: 43em;
+    height: 38em;
     margin: auto; }
     .siteContent #splashpage h1 {
-      font: 600 3em "futura-pt", sans-serif;
+      font: 600 3em "futura-pt";
       color: #fff;
-      margin-top: 3em;
+      margin-top: 2em;
       margin-bottom: 0.5em;
       text-shadow: 1px 1px 3px #000;
       text-align: center; }
@@ -183,7 +183,7 @@ figure {
       background-position: 95% center; }
   .siteContent #jobspage {
     width: 85%;
-    height: 43em;
+    height: 38em;
     margin: auto;
     font: 300 1em "Helvetica Neue",helvetica,sans-serif;
     padding-left: 1em;
@@ -195,20 +195,20 @@ figure {
       background: rgba(255, 255, 255, 0.8);
       height: 20em;
       margin: auto;
-      margin-top: 4em;
+      margin-top: 1em;
       padding-right: 1em;
       padding-left: 1em;
-      padding-top: 2em;
-      padding-bottom: 2em;
+      padding-top: 1em;
+      padding-bottom: 1em;
       width: 725px; }
       .siteContent #jobspage section h1 {
-        font: 600 3em "futura-pt", sans-serif;
+        font: 600 3em "futura-pt";
         color: #484848;
         text-shadow: 0px 0px 0px #000;
         display: block;
         margin-bottom: 0.5em; }
       .siteContent #jobspage section h2 {
-        font: 600 1.7em "futura-pt", sans-serif;
+        font: 600 1.7em "futura-pt";
         color: #bc2431;
         margin-top: 1.5em;
         margin-bottom: 0.5em;
@@ -236,7 +236,7 @@ figure {
       font: 200 1.2em "Helvetica Neue",helvetica,sans-serif; }
   .siteContent #contactpage {
     width: 85%;
-    height: 43em;
+    height: 38em;
     margin: auto;
     font: 300 1em "Helvetica Neue",helvetica,sans-serif;
     padding-left: 1em;
@@ -246,9 +246,9 @@ figure {
       height: 20em;
       width: 760px;
       margin: auto;
-      margin-top: 4em;
-      padding-top: 2em;
-      padding-bottom: 2em; }
+      margin-top: 1em;
+      padding-top: 1em;
+      padding-bottom: 1em; }
     .siteContent #contactpage #map {
       width: 85%;
       height: 315px;
