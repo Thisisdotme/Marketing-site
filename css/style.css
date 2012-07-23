@@ -114,7 +114,7 @@ figure {
       text-align: left;
       margin-top: 2em;
       display: inline;
-      font: 600 2em "Myriad Pro Bold","Gill Sans","Impact",sans-serif; }
+      font: 600 2em "futura-pt", sans-serif; }
     .siteContent #headline_container #ticker {
       display: inline; }
       .siteContent #headline_container #ticker li {
@@ -130,7 +130,7 @@ figure {
     color: #fff;
     margin-top: 3em;
     margin-bottom: 1em;
-    font: 600 2em "Myriad Pro Bold","Gill Sans","Impact",sans-serif;
+    font: 600 2em "futura-pt", sans-serif;
     text-align: center; }
     .siteContent #links a {
       text-decoration: none;
@@ -141,7 +141,7 @@ figure {
     height: 43em;
     margin: auto; }
     .siteContent #splashpage h1 {
-      font: 600 3em "Myriad Pro Bold","Gill Sans","Impact",sans-serif;
+      font: 600 3em "futura-pt", sans-serif;
       color: #fff;
       margin-top: 3em;
       margin-bottom: 0.5em;
@@ -202,13 +202,13 @@ figure {
       padding-bottom: 2em;
       width: 725px; }
       .siteContent #jobspage section h1 {
-        font: 600 3em "Myriad Pro Bold","Gill Sans","Impact",sans-serif;
+        font: 600 3em "futura-pt", sans-serif;
         color: #484848;
         text-shadow: 0px 0px 0px #000;
         display: block;
         margin-bottom: 0.5em; }
       .siteContent #jobspage section h2 {
-        font: 600 1.7em "Myriad Pro Bold","Gill Sans","Impact",sans-serif;
+        font: 600 1.7em "futura-pt", sans-serif;
         color: #bc2431;
         margin-top: 1.5em;
         margin-bottom: 0.5em;
@@ -217,7 +217,7 @@ figure {
       .siteContent #jobspage section a {
         color: #bc2431; }
     .siteContent #jobspage h1 {
-      font: 600 3em "Myriad Pro Bold","Gill Sans","Impact",sans-serif;
+      font: 600 3em "futura-pt", sans-serif;
       color: #bc2431;
       margin-bottom: 0.5em;
       text-shadow: 1px 1px 3px #000;
@@ -344,13 +344,13 @@ figure {
         margin-top: 1em;
         width: 725px; }
         .siteContent #jobspage section h1 {
-          font: 600 3em "Myriad Pro Bold","Gill Sans","Impact",sans-serif;
+          font: 600 3em "futura-pt", sans-serif;
           color: #484848;
           text-shadow: 0px 0px 0px #000;
           display: block;
           margin-bottom: 0.5em; }
         .siteContent #jobspage section h2 {
-          font: 600 1.7em "Myriad Pro Bold","Gill Sans","Impact",sans-serif;
+          font: 600 1.7em "futura-pt", sans-serif;
           color: #bc2431;
           margin-top: 1.5em;
           margin-bottom: 0.5em;
@@ -417,11 +417,11 @@ figure {
         width: 618px;
         height: 23em; }
         .siteContent #jobspage section h1 {
-          font: 600 3em "Myriad Pro Bold","Gill Sans","Impact",sans-serif;
+          font: 600 3em "futura-pt", sans-serif;
           text-shadow: 0px 0px 0px #000;
           margin-bottom: 0.5em; }
         .siteContent #jobspage section h2 {
-          font: 600 1.7em "Myriad Pro Bold","Gill Sans","Impact",sans-serif;
+          font: 600 1.7em "futura-pt", sans-serif;
           margin-top: 1.5em;
           margin-bottom: 0.5em; }
     .siteContent #contactpage {
@@ -467,7 +467,7 @@ figure {
         margin: auto;
         margin-bottom: 1em; }
       .siteContent #headline_container #abstract {
-        font: 600 16px "Myriad Pro Bold","Gill Sans","Impact",sans-serif;
+        font: 600 16px "futura-pt", sans-serif;
         margin-left: 16px;
         float: left;
         width: 164px; }
@@ -483,18 +483,18 @@ figure {
       margin-top: 3em;
       z-index: 1;
       color: #fff;
-      font: 600 1em "Myriad Pro Bold","Gill Sans","Impact", sans-serif;
+      font: 600 1em "futura-pt", sans-serif;
       text-align: center; }
       .siteContent #links a {
         text-decoration: none;
         float: left;
         width: 33%; }
     .siteContent #splashpage {
-      width: 95%;
-      height: auto;
-      margin: auto; }
+      width: 295px;
+      margin: auto;
+      height: 20em; }
       .siteContent #splashpage h1 {
-        font: 600 1.5em "Myriad Pro Bold","Gill Sans","Impact",sans-serif;
+        font: 600 1.5em "futura-pt", sans-serif;
         margin-top: 1em; }
       .siteContent #splashpage form {
         width: 15em;
@@ -519,8 +519,8 @@ figure {
           margin: auto !important;
           border: 1px solid #fff; }
     .siteContent #jobspage {
-      width: 95%;
-      height: auto;
+      width: 295px;
+      height: 20em;
       margin: auto;
       font: 300 1em "Helvetica Neue",helvetica,sans-serif; }
       .siteContent #jobspage section {
@@ -529,15 +529,16 @@ figure {
         margin: auto;
         margin-top: 1em;
         padding: 1em;
-        width: 90%; }
+        width: 100%;
+        overflow: scroll; }
         .siteContent #jobspage section h1 {
-          font: 600 2em "Myriad Pro Bold","Gill Sans","Impact",sans-serif;
+          font: 600 2em "futura-pt", sans-serif;
           color: #484848;
           text-shadow: 0px 0px 0px #000;
           display: block;
           margin-bottom: 0.5em; }
         .siteContent #jobspage section h2 {
-          font: 600 1em "Myriad Pro Bold","Gill Sans","Impact",sans-serif;
+          font: 600 1em "futura-pt", sans-serif;
           color: #bc2431;
           margin-top: 1em;
           margin-bottom: 0.5em;
@@ -546,7 +547,7 @@ figure {
         .siteContent #jobspage section a {
           color: #bc2431; }
       .siteContent #jobspage h1 {
-        font: 600 1.5em "Myriad Pro Bold","Gill Sans","Impact",sans-serif; }
+        font: 600 1.5em "futura-pt", sans-serif; }
       .siteContent #jobspage h3 {
         font: 500 1em "Helvetica Neue",helvetica,sans-serif; }
       .siteContent #jobspage h2 {
@@ -556,24 +557,25 @@ figure {
         margin-left: 1em;
         font: 200 1em "Helvetica Neue",helvetica,sans-serif; }
     .siteContent #contactpage {
-      width: 95%;
-      height: auto;
+      width: 200px;
+      height: 20em;
       margin: auto;
       font: 300 1em "Helvetica Neue",helvetica,sans-serif; }
       .siteContent #contactpage section {
         height: 10em;
-        width: 90%;
+        width: 100%;
         margin: auto;
         margin-top: 1em;
-        padding-top: 1em;
-        padding-bottom: 1em; }
+        padding: 1em; }
       .siteContent #contactpage #map {
         margin-top: 0;
         height: 315px; }
         .siteContent #contactpage #map #googlemap {
           display: none; }
         .siteContent #contactpage #map h1 {
-          margin-top: 0; }
+          margin-top: 0em; }
+        .siteContent #contactpage #map #mapdescription h1 {
+          margin-top: 0em; }
 
   .copy {
     display: none; }

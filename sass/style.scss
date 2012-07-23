@@ -120,7 +120,7 @@ figure {
 			text-align:left;
 			margin-top:2em;
 			display:inline;
-			font:600 2em "Myriad Pro Bold","Gill Sans","Impact",sans-serif;
+			font:600 2em "futura-pt", sans-serif;
 		}
 		#ticker {
 			display:inline;
@@ -140,7 +140,7 @@ figure {
 		color:#fff;
 		margin-top:$topspace;
 		margin-bottom:1em;
-		font:600 2em "Myriad Pro Bold","Gill Sans","Impact",sans-serif;
+		font:600 2em "futura-pt", sans-serif;
 		text-align:center;
 		a {
 			text-decoration:none;
@@ -153,7 +153,7 @@ figure {
 		height:43em;
 		margin:auto;
 		h1 {
-			font:600 3em "Myriad Pro Bold","Gill Sans","Impact",sans-serif;
+			font:600 3em "futura-pt", sans-serif;
 			color:#fff;
 			margin-top:3em;
 			margin-bottom:0.5em;
@@ -224,14 +224,14 @@ figure {
 			padding-bottom:2em;
 			width:725px;
 			h1 {
-				font:600 3em "Myriad Pro Bold","Gill Sans","Impact",sans-serif;
+				font:600 3em "futura-pt", sans-serif;
 				color:$darkgrey;
 				text-shadow:0px 0px 0px #000;
 				display:block;
 				margin-bottom:0.5em;
 			}
 			h2 {
-				font:600 1.7em "Myriad Pro Bold","Gill Sans","Impact",sans-serif;
+				font:600 1.7em "futura-pt", sans-serif;
 				color:$thisisred;
 				margin-top:1.5em;
 				margin-bottom:0.5em;
@@ -243,7 +243,7 @@ figure {
 			}
 		}
 		h1 {
-			font:600 3em "Myriad Pro Bold","Gill Sans","Impact",sans-serif;
+			font:600 3em "futura-pt", sans-serif;
 			color:$thisisred;
 			margin-bottom:0.5em;
 			text-shadow:1px 1px 3px #000;
@@ -393,14 +393,14 @@ figure {
 				margin-top:1em;
 				width:725px;
 				h1 {
-					font:600 3em "Myriad Pro Bold","Gill Sans","Impact",sans-serif;
+					font:600 3em "futura-pt", sans-serif;
 					color:$darkgrey;
 					text-shadow:0px 0px 0px #000;
 					display:block;
 					margin-bottom:0.5em;
 				}
 				h2 {
-					font:600 1.7em "Myriad Pro Bold","Gill Sans","Impact",sans-serif;
+					font:600 1.7em "futura-pt", sans-serif;
 					color:$thisisred;
 					margin-top:1.5em;
 					margin-bottom:0.5em;
@@ -483,12 +483,12 @@ figure {
 				width:618px;
 				height:23em;
 				h1 {
-					font:600 3em "Myriad Pro Bold","Gill Sans","Impact",sans-serif;
+					font:600 3em "futura-pt", sans-serif;
 					text-shadow:0px 0px 0px #000;
 					margin-bottom:0.5em;
 				}
 				h2 {
-					font:600 1.7em "Myriad Pro Bold","Gill Sans","Impact",sans-serif;
+					font:600 1.7em "futura-pt", sans-serif;
 					margin-top:1.5em;
 					margin-bottom:0.5em;
 				}
@@ -544,7 +544,7 @@ figure {
 				margin-bottom:1em;
 			}
 			#abstract {
-				font:600 16px "Myriad Pro Bold","Gill Sans","Impact",sans-serif;
+				font:600 16px "futura-pt", sans-serif;
 				margin-left:16px;
 				float:left;
 				width:164px;
@@ -563,7 +563,7 @@ figure {
 			margin-top:3em;
 			z-index:1;
 			color:#fff;
-			font: 600 1em "Myriad Pro Bold","Gill Sans","Impact", sans-serif;
+			font: 600 1em "futura-pt", sans-serif;
 			text-align:center;
 			a {
 				text-decoration:none;
@@ -572,11 +572,11 @@ figure {
 			}
 		}
 		#splashpage {
-			width:95%;
-			height:auto;
+			width:295px;
 			margin:auto;
+			height:20em;
 			h1 {
-				font:600 1.5em "Myriad Pro Bold","Gill Sans","Impact",sans-serif;
+				font:600 1.5em "futura-pt", sans-serif;
 				margin-top:1em;
 			}
 			form {
@@ -608,8 +608,8 @@ figure {
 			}
 		}
 		#jobspage {
-			width:95%;
-			height:auto;
+			width:295px;
+			height:20em;
 			margin:auto;
 			font:300 1em "Helvetica Neue",helvetica,sans-serif;
 			section {
@@ -618,16 +618,17 @@ figure {
 				margin:auto;
 				margin-top:1em;
 				padding:1em;
-				width:90%;
+				width:100%;
+				overflow:scroll;
 				h1 {
-					font:600 2em "Myriad Pro Bold","Gill Sans","Impact",sans-serif;
+					font:600 2em "futura-pt", sans-serif;
 					color:rgb(72,72,72);
 					text-shadow:0px 0px 0px #000;
 					display:block;
 					margin-bottom:0.5em;
 				}
 				h2 {
-					font:600 1em "Myriad Pro Bold","Gill Sans","Impact",sans-serif;
+					font:600 1em "futura-pt", sans-serif;
 					color:$thisisred;
 					margin-top:1em;
 					margin-bottom:0.5em;
@@ -639,7 +640,7 @@ figure {
 				}
 			}
 			h1 {
-				font:600 1.5em "Myriad Pro Bold","Gill Sans","Impact",sans-serif;
+				font:600 1.5em "futura-pt", sans-serif;
 			}
 			h3 {
 				font:500 1em "Helvetica Neue",helvetica,sans-serif;
@@ -654,17 +655,16 @@ figure {
 			}
 		}
 		#contactpage {
-			width:95%;
-			height:auto;
+			width:200px;
+			height:20em;
 			margin:auto;
 			font:300 1em "Helvetica Neue",helvetica,sans-serif;
 			section {
 				height:10em;
-				width:90%;
+				width:100%;
 				margin:auto;
 				margin-top:1em;
-				padding-top:1em;
-				padding-bottom:1em;
+				padding:1em;
 			}
 			#map {
 				margin-top:0;
@@ -673,7 +673,12 @@ figure {
 					display:none;
 				}
 				h1 {
-					margin-top:0;
+					margin-top:0em;
+				}
+				#mapdescription {
+					h1 {
+						margin-top:0em;
+					}
 				}
 			}
 		}

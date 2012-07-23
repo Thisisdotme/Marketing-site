@@ -18,6 +18,8 @@
 <script src="js/libs/modernizr-2.5.3.min.js"></script>
 <link rel="stylesheet" href="css/style.css">
 <link rel="icon" type="image/png" href="img/favicon.png">
+<script type="text/javascript" src="//use.typekit.net/twe7pat.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 </head>
 <body>
 <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http:\                                                   \
@@ -43,7 +45,7 @@
 		<h1>reserve your username</h1>
 		<form id="reserve-form" name="emails" action="" method="POST" onsubmit="">
 			<input type="text" autocapitalize="off" autocorrect="off" onfocus="if(this.value == 'yourname') { this.value = ''; } " onblur="if(this.value == '') { this.value = 'yourname'; } " value="yourname" id="firstinput" maxlength="16">
-			<input type="text" autocapitalize="off" autocorrect="off" onfocus="if(this.value == 'email address') { this.value = ''; }" onblur="if(this.value == '') { this.value = 'email address'; } " value="email address" id="emailinput">
+			<input type="email" autocapitalize="off" autocorrect="off" onfocus="if(this.value == 'email address') { this.value = ''; }" onblur="if(this.value == '') { this.value = 'email address'; } " value="email address" id="emailinput">
 			<button type="submit">reserve</button>
 		</form>
 	</div>
