@@ -155,7 +155,7 @@ figure {
 		margin:auto;
 		h1 {
 			font:600 3em "futura-pt", sans-serif;
-			color:$lightgrey;
+			color:#fff;
 			margin-top:2em;
 			margin-bottom:0.5em;
 			text-shadow:1px 1px 3px #000;
@@ -180,7 +180,9 @@ figure {
 				margin:0em;
 				padding-left:0.5em;
 				-webkit-border-radius:0;
-				color:$darkgrey;
+				color:$mediumgrey;
+				-webkit-box-shadow: 0px 0px 23px 0px #000;
+			    box-shadow: 0px 0px 23px 0px #000;
 			}
 			button {
 				float:none;
@@ -190,6 +192,8 @@ figure {
 				height:2.6em;
 				-webkit-border-radius:0em 1em 1em 0em;
 				border-radius:0em 1em 1em 0em;
+				-webkit-box-shadow: 0px 0px 23px 0px #000;
+			    box-shadow: 0px 0px 23px 0px #000;
 			}
 		}
 		#reserve-form input.valid {
@@ -266,6 +270,13 @@ figure {
 			margin:auto;
 			#googlemap {
 				float:left;
+				height:315px;
+				width:315px;
+				background:url(../img/gmap.png);
+				background-size:cover;
+				-webkit-background-size:cover;
+				-moz-background-size:cover;
+				-o-background-size:cover;
 			}
 			#mapdescription {
 				float:left;
@@ -314,16 +325,17 @@ figure {
 	background-color: white;
 	z-index:1002;
 	overflow: auto;
+	-webkit-overflow-scrolling:touch;
+	-webkit-box-shadow: 0px 0px 23px 0px #000;
+    box-shadow: 0px 0px 23px 0px #000;
 	h1 {
 		font:600 3em "futura-pt", sans-serif;
 		color:$thisisred;
 		margin-bottom:0.5em;
-		text-shadow:1px 1px 3px #000;
 		display:block;
 	}
 	h3 {
 		font:500 1.1em "Helvetica Neue",sans-serif;
-		font-style:italic;
 		color:#000;
 		margin-bottom:1em;
 	}
@@ -381,7 +393,7 @@ figure {
 			}
 		}
 		#links {
-			margin-top:3em;
+			margin-top:2em;
 		}
 		#splashpage {
 			height:33em;
@@ -634,6 +646,7 @@ figure {
 				width:100%;
 				overflow:hidden;
 				padding:0;
+				text-overflow:ellipsis;
 				h1 {
 					font:600 2em "futura-pt", sans-serif;
 					color:rgb(72,72,72);
@@ -642,6 +655,10 @@ figure {
 					margin-left:0.5em;
 					margin-bottom:0em;
 					margin-top:0.5em;
+					display:none;
+				}
+				h1+p {
+					display:none;
 				}
 				p {
 					margin-left:1em;
@@ -652,8 +669,10 @@ figure {
 					color:$thisisred;
 					margin-top:1em;
 					margin-bottom:0.5em;
+					margin-left:1em;
 					text-shadow:0px 0px 0px #000;
-					display:block;				
+					display:block;
+					text-decoration:underline;				
 				}
 				a {
 					color:$thisisred;

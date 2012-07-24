@@ -143,7 +143,7 @@ figure {
     margin: auto; }
     .siteContent #splashpage h1 {
       font: 600 3em "futura-pt", sans-serif;
-      color: #898a8a;
+      color: #fff;
       margin-top: 2em;
       margin-bottom: 0.5em;
       text-shadow: 1px 1px 3px #000;
@@ -166,7 +166,9 @@ figure {
         margin: 0em;
         padding-left: 0.5em;
         -webkit-border-radius: 0;
-        color: #484848; }
+        color: #616363;
+        -webkit-box-shadow: 0px 0px 23px 0px #000;
+        box-shadow: 0px 0px 23px 0px #000; }
       .siteContent #splashpage form button {
         float: none;
         width: 5em;
@@ -174,7 +176,9 @@ figure {
         color: #fff;
         height: 2.6em;
         -webkit-border-radius: 0em 1em 1em 0em;
-        border-radius: 0em 1em 1em 0em; }
+        border-radius: 0em 1em 1em 0em;
+        -webkit-box-shadow: 0px 0px 23px 0px #000;
+        box-shadow: 0px 0px 23px 0px #000; }
     .siteContent #splashpage #reserve-form input.valid {
       background-image: url(../img/checkmark.png);
       background-repeat: no-repeat;
@@ -237,7 +241,14 @@ figure {
       height: 315px;
       margin: auto; }
       .siteContent #contactpage #map #googlemap {
-        float: left; }
+        float: left;
+        height: 315px;
+        width: 315px;
+        background: url(../img/gmap.png);
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover; }
       .siteContent #contactpage #map #mapdescription {
         float: left;
         width: 9em;
@@ -278,16 +289,17 @@ figure {
   border: 5px solid #bc2431;
   background-color: white;
   z-index: 1002;
-  overflow: auto; }
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  -webkit-box-shadow: 0px 0px 23px 0px #000;
+  box-shadow: 0px 0px 23px 0px #000; }
   .white_content h1 {
     font: 600 3em "futura-pt", sans-serif;
     color: #bc2431;
     margin-bottom: 0.5em;
-    text-shadow: 1px 1px 3px #000;
     display: block; }
   .white_content h3 {
     font: 500 1.1em "Helvetica Neue",sans-serif;
-    font-style: italic;
     color: #000;
     margin-bottom: 1em; }
   .white_content h2 {
@@ -334,7 +346,7 @@ figure {
         height: 200px;
         width: 200px; }
     .siteContent #links {
-      margin-top: 3em; }
+      margin-top: 2em; }
     .siteContent #splashpage {
       height: 33em; }
       .siteContent #splashpage h1 {
@@ -542,7 +554,8 @@ figure {
         margin-top: 1em;
         width: 100%;
         overflow: hidden;
-        padding: 0; }
+        padding: 0;
+        text-overflow: ellipsis; }
         .siteContent #jobspage section h1 {
           font: 600 2em "futura-pt", sans-serif;
           color: #484848;
@@ -550,7 +563,10 @@ figure {
           display: block;
           margin-left: 0.5em;
           margin-bottom: 0em;
-          margin-top: 0.5em; }
+          margin-top: 0.5em;
+          display: none; }
+        .siteContent #jobspage section h1 + p {
+          display: none; }
         .siteContent #jobspage section p {
           margin-left: 1em;
           margin-right: 1em; }
@@ -559,8 +575,10 @@ figure {
           color: #bc2431;
           margin-top: 1em;
           margin-bottom: 0.5em;
+          margin-left: 1em;
           text-shadow: 0px 0px 0px #000;
-          display: block; }
+          display: block;
+          text-decoration: underline; }
         .siteContent #jobspage section a {
           color: #bc2431; }
       .siteContent #jobspage h1 {
