@@ -155,7 +155,7 @@ figure {
 		margin:auto;
 		h1 {
 			font:600 3em "futura-pt", sans-serif;
-			color:#fff;
+			color:$lightgrey;
 			margin-top:2em;
 			margin-bottom:0.5em;
 			text-shadow:1px 1px 3px #000;
@@ -180,6 +180,7 @@ figure {
 				margin:0em;
 				padding-left:0.5em;
 				-webkit-border-radius:0;
+				color:$darkgrey;
 			}
 			button {
 				float:none;
@@ -192,7 +193,7 @@ figure {
 			}
 		}
 		#reserve-form input.valid {
-			background-image:url(../img/checkmark.jpg);
+			background-image:url(../img/checkmark.png);
 		  	background-repeat: no-repeat;
 		  	background-position: 95% center;
 		}
@@ -234,7 +235,7 @@ figure {
 			h2 {
 				font:600 1.7em "futura-pt", sans-serif;
 				color:$thisisred;
-				margin-top:1.5em;
+				margin-top:0.5em;
 				margin-bottom:0.5em;
 				text-shadow:0px 0px 0px #000;
 				display:block;				
@@ -276,7 +277,7 @@ figure {
 					color:$darkgrey;
 				}
 				a {
-					color: blue;
+					color: $thisisred;
 				}
 			}
 		}
