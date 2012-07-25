@@ -96,7 +96,7 @@ figure {
 	z-index:0;
 	width:960px;
 	height:760px;
-	background:url(../img/photo23.jpg) no-repeat;
+	background:url(/img/photo23.jpg) no-repeat;
 	margin:0 auto;
 	#headline_container {
 		width:760px;
@@ -104,7 +104,7 @@ figure {
 		padding-top:$topspace;
 		height:200px;
 		#masthead {
-			background:url(../img/logo.png) no-repeat;
+			background:url(/img/logo.png) no-repeat;
 			background-size:cover;
 			-webkit-background-size:cover;
 			-moz-background-size:cover;
@@ -197,12 +197,12 @@ figure {
 			}
 		}
 		#reserve-form input.valid {
-			background-image:url(../img/checkmark.png);
+			background-image:url(/img/checkmark.png);
 		  	background-repeat: no-repeat;
 		  	background-position: 95% center;
 		}
 		#reserve-form input.not-valid {
-		  	background-image:url(../img/red-x.png);
+		  	background-image:url(/img/red-x.png);
 		  	background-repeat: no-repeat;
 		  	background-position: 95% center;
 		}
@@ -273,7 +273,7 @@ figure {
 				height:300px;
 				width:300px;
 				border: 5px solid $thisisred;
-				background:url(../img/gmap.png);
+				background:url(/img/gmap.png);
 				background-size:cover;
 				-webkit-background-size:cover;
 				-moz-background-size:cover;
@@ -363,7 +363,7 @@ figure {
 	position:absolute;
 	top:0.5%;
 	left:75.2%;
-	background:url(../img/x-button.png) no-repeat;
+	background:url(/img/x-button.png) no-repeat;
 	background-size:cover;
 	-webkit-background-size:cover;
 	-moz-background-size:cover;
@@ -874,7 +874,7 @@ textarea { overflow: auto; vertical-align: top; resize: vertical; }
 
 /* Colors for form validity */
 input:valid, textarea:valid {  }
-input:invalid, textarea:invalid { background-color: #f0dddd; }
+input:invalid, textarea:invalid { background-color: #fff; }
 
 
 /* =============================================================================
