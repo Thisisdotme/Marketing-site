@@ -156,7 +156,7 @@ figure {
 		h1 {
 			font:600 3em "futura-pt", sans-serif;
 			color:#fff;
-			margin-top:2em;
+			margin-top:3em;
 			margin-bottom:0.5em;
 			text-shadow:1px 1px 3px #000;
 			text-align:center;
@@ -316,10 +316,10 @@ figure {
 	display: none;
 	text-align:left;
 	position: absolute;
-	top: 2%;
-	left: 25%;
+	top: 1%;
+	left: 23%;
 	width: 50%;
-	height: 800px;
+	height: 700px;
 	padding: 16px;
 	border: 5px solid $thisisred;
 	background-color: white;
@@ -360,8 +360,8 @@ figure {
 	width:2em;
 	height:2em;
 	position:absolute;
-	top:1.2%;
-	left:76.5%;
+	top:0.5%;
+	left:75.2%;
 	background:url(../img/x-button.png) no-repeat;
 	background-size:cover;
 	-webkit-background-size:cover;
@@ -481,7 +481,7 @@ figure {
 			}
 			#abstract {
 				width:400px;
-				margin-top:1.5em;
+				margin-top:1.2em;
 			}
 			#ticker {
 				margin-top:0em;
@@ -572,6 +572,7 @@ figure {
 				margin-left:16px;
 				float:left;
 				width:169px;
+				margin-top: 1.3em;
 			}
 			#ticker {
 				color:$thisisred;
@@ -629,6 +630,8 @@ figure {
 					border-radius:0;
 					margin:auto !important;
 					border:1px solid #fff;
+					-webkit-border-radius:12px;
+					border-radius:12px;
 				}
 			}
 		}
@@ -736,6 +739,9 @@ figure {
 		left: 3%;
 		width: 82%;
 		height:300px;
+		h2:last-child {
+			color:#000;
+		}
 	}
 	#xbutton {
 		display:none;
