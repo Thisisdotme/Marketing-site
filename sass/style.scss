@@ -270,8 +270,9 @@ figure {
 			margin:auto;
 			#googlemap {
 				float:left;
-				height:315px;
-				width:315px;
+				height:300px;
+				width:300px;
+				border: 5px solid $thisisred;
 				background:url(../img/gmap.png);
 				background-size:cover;
 				-webkit-background-size:cover;

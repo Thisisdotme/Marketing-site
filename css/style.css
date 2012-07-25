@@ -242,8 +242,9 @@ figure {
       margin: auto; }
       .siteContent #contactpage #map #googlemap {
         float: left;
-        height: 315px;
-        width: 315px;
+        height: 300px;
+        width: 300px;
+        border: 5px solid #bc2431;
         background: url(../img/gmap.png);
         background-size: cover;
         -webkit-background-size: cover;
