@@ -118,6 +118,7 @@ $(document).ready(function() {
         $('#firstinput').addClass('valid').removeClass('not-valid');
 	    } else {
 	       $('#firstinput').addClass('not-valid').removeClass('valid');
+			$("#submitbtn").attr("disabled", "disabled");
          authornameAvailable = false;
 	    }
 	    requestInProgress  = false;
@@ -146,11 +147,14 @@ $(document).ready(function() {
        emailValid = true;
     } else {
       $('#emailinput').removeClass('valid').addClass('not-valid');
+		$("#submitbtn").attr("disabled", "disabled");
       emailValid = false;
     }
+	if (authornameAvailable && emailValid) {
+		$("#submitbtn").removeAttr("disabled");
+	}	
 	  	  
 	});
-	
 	$('#reserve-form').on('submit', function(event) {
     
     if(!authornameAvailable || !emailValid) {
