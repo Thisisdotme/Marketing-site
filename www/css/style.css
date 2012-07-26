@@ -516,7 +516,7 @@ figure {
     .siteContent #splashpage {
       width: 295px;
       margin: auto;
-      height: 20em;
+      height: 80%;
       padding: 0; }
       .siteContent #splashpage h1 {
         font: 600 1.5em "futura-pt", sans-serif;
@@ -547,7 +547,7 @@ figure {
           border-radius: 12px; }
     .siteContent #jobspage {
       width: 295px;
-      height: 20em;
+      height: 80%;
       margin: auto;
       padding: 0;
       font: 300 1em "Helvetica Neue",sans-serif; }
@@ -597,7 +597,7 @@ figure {
         font: 200 1em "Helvetica Neue",sans-serif; }
     .siteContent #contactpage {
       width: 295px;
-      height: 20em;
+      height: 80%;
       margin: auto;
       font: 300 1em "Helvetica Neue",sans-serif;
       padding: 0; }
