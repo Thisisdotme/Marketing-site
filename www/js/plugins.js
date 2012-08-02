@@ -95,7 +95,7 @@ $(document).ready(function() {
 	    $.ajax({
 	      type: "get",
 	      dataType: "text",
-  	    url: TIM.baseApiUrl + "reservation/" + authorname,
+  	    url: TIM.baseApiUrl + "reservations/" + authorname,
   	    success: function(json, textStatus) {
   	      setAvailability(false);
   	      authornameCache["" + authorname] = {available: false};
@@ -172,7 +172,7 @@ $(document).ready(function() {
 	    requestInProgress = true;
 	    $.ajax({
 	      type: "put",
-  	    url: TIM.baseApiUrl + "reservation/" + authorname,
+  	    url: TIM.baseApiUrl + "reservations/" + authorname,
   	    data: JSON.stringify(emailJSON),
   	    success: function(json, textStatus) {
   	      console.log(json, textStatus);
